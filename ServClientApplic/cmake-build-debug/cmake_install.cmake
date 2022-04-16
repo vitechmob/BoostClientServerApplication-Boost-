@@ -1,4 +1,4 @@
-# Install script for directory: /home/xink/CLionProjects/ServClientApplic
+# Install script for directory: /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,12 +44,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/xink/CLionProjects/ServClientApplic/cmake-build-debug/Server/cmake_install.cmake")
+  include("/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/xink/CLionProjects/ServClientApplic/cmake-build-debug/Client/cmake_install.cmake")
+  include("/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Client/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/xink/CLionProjects/ServClientApplic/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

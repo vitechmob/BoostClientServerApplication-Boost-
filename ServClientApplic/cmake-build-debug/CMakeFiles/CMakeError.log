@@ -1,11 +1,11 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/xink/CLionProjects/ServClientApplic/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/snap/clion/184/bin/ninja/linux/ninja cmTC_4d1c9 && [1/2] Building C object CMakeFiles/cmTC_4d1c9.dir/src.c.o
-[2/2] Linking C executable cmTC_4d1c9
-[31mFAILED: [0mcmTC_4d1c9 
-: && /usr/bin/gcc   CMakeFiles/cmTC_4d1c9.dir/src.c.o -o cmTC_4d1c9   && :
-/usr/bin/ld: CMakeFiles/cmTC_4d1c9.dir/src.c.o: в функции «main»:
+Run Build Command(s):/snap/clion/189/bin/ninja/linux/ninja cmTC_05765 && [1/2] Building C object CMakeFiles/cmTC_05765.dir/src.c.o
+[2/2] Linking C executable cmTC_05765
+FAILED: cmTC_05765 
+: && /usr/bin/gcc   CMakeFiles/cmTC_05765.dir/src.c.o -o cmTC_05765   && :
+/usr/bin/ld: CMakeFiles/cmTC_05765.dir/src.c.o: в функции «main»:
 src.c:(.text+0x46): неопределённая ссылка на «pthread_create»
 /usr/bin/ld: src.c:(.text+0x52): неопределённая ссылка на «pthread_detach»
 /usr/bin/ld: src.c:(.text+0x5e): неопределённая ссылка на «pthread_cancel»

@@ -91,7 +91,7 @@ int AddNewBook(std :: string name,Author author){
         driver = get_driver_instance();
         con = driver->connect(DATABASE_ADDRESS, USERNAME, PASSWORD);
         con->setSchema("ApplicationDB");
-        prep_stmt = con->prepareStatement("INSERT INTO books(id,name,author) VALUES(?,?,?)")
+        prep_stmt = con->prepareStatement("INSERT INTO books(id,name,author) VALUES(?,?,?)");
         delete con;
         delete prep_stmt;
     }

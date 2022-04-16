@@ -1,4 +1,4 @@
-# Install script for directory: /home/xink/CLionProjects/ServClientApplic/Client
+# Install script for directory: /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Client
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

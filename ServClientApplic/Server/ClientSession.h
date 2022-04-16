@@ -100,7 +100,6 @@ int UserMenu(Client client,socket_ptr socket){
                 break;
             case '2' : ;
                 {
-                    BookBuffer bkBuff()
                 }
                 break;
         }
