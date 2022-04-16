@@ -124,15 +124,15 @@ int RegFunction(socket_ptr socket){
     if(CheckBack(password)){
         return USER_BACK;
     }
-    if (AddNewUser(name, surname, login, password) == SQL_SUCCESSFULLY_ADDED) {
+    if (AddNewUser(std :: string(name), std :: string(surname), std :: string(login), std :: string(password)) == SQL_SUCCESSFULLY_ADDED) {
         char resp[2] = {"1"};
         socket->send(boost::asio::buffer(resp));
         return SQL_SUCCESSFULLY_ADDED;
-    } else if (AddNewUser(name, surname, login, password) == SQL_LOGIN_EXISTS) {
+    } else if (AddNewUser(std :: string(name), std :: string(surname), std :: string(login), std :: string(password)) == SQL_LOGIN_EXISTS) {
         char resp[2] = {"5"};
         socket->send(boost::asio::buffer(resp));
         return RegFunction(socket);
-    } else if(AddNewUser(name, surname, login, password) == SQL_ERROR) {
+    } else if(AddNewUser(std :: string(name), std :: string(surname), std :: string(login), std :: string(password)) == SQL_ERROR) {
         cerr << "Error, cant add new user in DB\n";
         char err_code[2] = {"3"};
         socket->send(boost::asio::buffer(err_code));

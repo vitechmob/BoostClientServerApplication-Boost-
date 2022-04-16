@@ -15,7 +15,19 @@ private:
 public:
     explicit Author(std :: string,std :: string,int,std :: string);
     void PrintInfo() override;
-    Author(const Author &auth);
+    explicit Author(const Author &auth);
+    std :: string GetName() const{
+        return *name;
+    }
+    std :: string GetSurname() const{
+        return *surname;
+    }
+    std :: string GetLanguage() const{
+        return *writing_language;
+    }
+    int GetBooksValue() const{
+        return *value_of_books;
+    }
     Author();
     ~Author();
 };
@@ -29,7 +41,7 @@ Author ::Author(std :: string name,std :: string surname,int value_of_books,std 
     this->value_of_books = boost :: shared_ptr<int>(new int);
     this->writing_language = boost :: shared_ptr<std :: string>(new std :: string);
     *this->value_of_books = value_of_books;
-    *this->writing_language = writing_language;
+    *this->writing_language = std :: move(writing_language);
 }
 
 Author ::Author(const Author &auth) : Person(auth){
@@ -45,4 +57,7 @@ Author :: ~Author() {
 void Author::PrintInfo() {
     std :: cout << *name <<  " " << *surname << " " << *value_of_books << " " << *writing_language << std :: endl;
 }
+
+
+
 #endif //SERVCLIENTAPPLIC_AUTHOR_H

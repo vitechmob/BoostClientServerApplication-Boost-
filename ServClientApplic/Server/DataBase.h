@@ -32,7 +32,7 @@ int GetUsersValue(sql :: Statement *stmt);
 LogFlagReturning CheckLoginPassword(std :: string input_login,std :: string input_password);
 int CheckLogin(std :: string input_login);
 
-int AddNewUser(std :: string name,std :: string surname,std :: string login,std :: string password){
+int AddNewUser(const std :: string& name,const std :: string &surname,const std :: string &login,const std :: string &password){
     try {
         if(CheckLogin(login) == SQL_LOGIN_EXISTS){
             return SQL_LOGIN_EXISTS;
@@ -92,6 +92,9 @@ int AddNewBook(std :: string name,Author author){
         con = driver->connect(DATABASE_ADDRESS, USERNAME, PASSWORD);
         con->setSchema("ApplicationDB");
         prep_stmt = con->prepareStatement("INSERT INTO books(id,name,author) VALUES(?,?,?)");
+
+
+
         delete con;
         delete prep_stmt;
     }

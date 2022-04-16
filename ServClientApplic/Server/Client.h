@@ -18,10 +18,10 @@ public:
     int GetId(){
         return *ID;
     }
-    std :: string GetLogin(){
+    std :: string GetLogin() const{
         return *login;
     }
-    std :: string GetPassword(){
+    std :: string GetPassword() const{
         return *password;
     }
     Client();

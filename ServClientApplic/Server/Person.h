@@ -12,10 +12,10 @@ protected:
 public:
     explicit Person(std :: string,std :: string);
     virtual void PrintInfo() = 0;
-    std :: string GetName(){
+    std :: string GetName() const{
         return* name;
     }
-    std :: string GetSurname(){
+    std :: string GetSurname() const{
         return *surname;
     }
     Person();
