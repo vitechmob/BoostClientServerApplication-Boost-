@@ -15,9 +15,9 @@ int Session(socket_ptr socket){
     boost :: shared_ptr<bool> flag_ptr(new bool);
     *flag_ptr = true;
     while(*flag_ptr) {
-        int choice = LogMenu();
+
         try {
-            switch (choice) {
+            switch (auto choice = LogMenu();choice) {
                 case 1 :;
                     {
                         char req[2] = {"1"};
@@ -52,6 +52,10 @@ int Session(socket_ptr socket){
                     }
                     break;
                 case 4 :;
+                    {
+                        exit(EXIT_STATUS);
+                    }
+                default :;
                     {
                         exit(EXIT_STATUS);
                     }
