@@ -70,6 +70,57 @@ int AddNewUser(const std :: string& name,const std :: string &surname,const std 
     }
 }
 
+struct BookInfo{
+    int ID;
+    std :: string book_name;
+    std :: string author_name;
+    std :: string author_surname;
+    BookInfo(int ID,std :: string book_name,std :: string author_name,std :: string author_surname){
+        this->ID = ID;
+        this->book_name = book_name;
+        this->author_name = author_name;
+        this->author_surname = author_surname;
+    }
+};
+
+std :: map<int,BookInfo> BooksMap(){
+        try {
+            std::map<int, BookInfo> books;
+            sql::Driver *driver;
+            sql::Connection *con;
+            sql::Statement *stmt;
+            sql::ResultSet *res;
+            driver = get_driver_instance();
+            con = driver->connect(DATABASE_ADDRESS, USERNAME, PASSWORD);
+            con->setSchema("ApplicationDB");
+            stmt = con->createStatement();
+            res = stmt->executeQuery("SELECT books.id,books.book_name,authors.name,authors.surname FROM books JOIN authors on authors.id = books.author_id");
+            while (res->next()) {
+                int ID = res->getInt("id");
+                std::string book_name = res->getString("book_name");
+                std::string author_name = res->getString("name");
+                std::string author_surname = res->getString("surname");
+                BookInfo inf(ID, book_name, author_name, author_surname);
+                books.insert(std::pair<int, BookInfo>(inf.ID, inf));
+            }
+
+            delete con;
+            delete stmt;
+            delete res;
+            return books;
+        }catch(sql::SQLException &e) {
+            cout << "# ERR: SQLException in " << __FILE__;
+            cout << "(" << __FUNCTION__ << ") on line "
+                 << __LINE__ << endl;
+            cout << "# ERR: " << e.what();
+            cout << " (MySQL error code: " << e.getErrorCode();
+            cout << ", SQLState: " << e.getSQLState() << " )" << endl;
+            std :: map<int,BookInfo> m;
+            m.insert(std :: pair<int,BookInfo>(-5,BookInfo(1,"err","err","err")));
+            return m;
+        }
+    }
+
 int GetUsersValue(sql :: Statement *stmt){
     sql :: ResultSet *res;
     res = stmt->executeQuery("SELECT id,name,surname,login,password FROM users ORDER BY id ASC");
@@ -91,10 +142,7 @@ int AddNewBook(std :: string name,Author author){
         driver = get_driver_instance();
         con = driver->connect(DATABASE_ADDRESS, USERNAME, PASSWORD);
         con->setSchema("ApplicationDB");
-        prep_stmt = con->prepareStatement("INSERT INTO books(id,name,author) VALUES(?,?,?)");
-
-
-
+        prep_stmt = con->prepareStatement("INSERT INTO books(id,book_name,author) VALUES(?,?,?)");
         delete con;
         delete prep_stmt;
     }

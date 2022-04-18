@@ -22,6 +22,19 @@ struct ClientBuffer{
     }
 };
 
+struct BookBuffer{
+    char book_ID[20];
+    char book_name[20];
+    char author_surname[20];
+    char author_name[20];
+    BookBuffer(BookInfo binf){
+        sprintf(book_ID,"%d",binf.ID);
+        strcpy(book_name,binf.book_name.c_str());
+        strcpy(author_name,binf.author_name.c_str());
+        strcpy(author_surname,binf.author_surname.c_str());
+    }
+};
+
 int RegFunction(socket_ptr socket);
 LogFlagReturning LogFunction(socket_ptr socket);
 bool CheckBack(char *buffer);
@@ -75,7 +88,7 @@ int ClientSession(socket_ptr socket,boost :: shared_ptr<std :: vector<boost :: s
         }
     }
     catch(const std :: exception &ex){
-        cerr << "Error:user has been disconnected" << ex.what() << endl;
+        cerr << "Error:user has been disconnected:" << ex.what() << endl;
         sockets->erase(sockets->begin() + this_socket_id);
         if(this_logged_id != 0) {
             clients->erase(clients->begin() + this_logged_id);
@@ -100,6 +113,25 @@ int UserMenu(Client client,socket_ptr socket){
                 break;
             case '2' : ;
                 {
+                    std :: map<int,BookInfo> books = BooksMap();
+                    uint64_t size = books.size();
+                    char sizeT[20];
+                    sprintf(sizeT,"%lu",size);
+                    cout << sizeT;
+                    socket->send(boost :: asio :: buffer(sizeT));
+                    if(books.at(0).ID == -5){
+                        socket->send(boost :: asio :: buffer("err"));
+                    }
+                    else {
+                        cout << "Success" << endl;
+                        for (const auto &[id, bk]: books) {
+                            BookBuffer bkBuff(bk);
+                            socket->send(boost :: asio :: buffer(bkBuff.book_ID));
+                            socket->send(boost :: asio :: buffer(bkBuff.book_name));
+                            socket->send(boost :: asio :: buffer(bkBuff.author_name));
+                            socket->send(boost :: asio :: buffer(bkBuff.author_surname));
+                        }
+                    }
                 }
                 break;
         }

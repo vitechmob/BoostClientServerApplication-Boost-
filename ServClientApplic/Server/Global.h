@@ -5,6 +5,7 @@
 #include <boost/asio.hpp>
 #include <boost/thread.hpp>
 #include <vector>
+#include <map>
 #include <iostream>
 #include <cstdlib>
 #include <mysql_connection.h>

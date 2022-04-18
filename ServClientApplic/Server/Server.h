@@ -74,7 +74,7 @@ int Server :: Start() {
         *this->isRunning = true;
         cout << "Server has been started" << endl;
         *this->value_of_connections = 0;
-        this->this_thread = boost::shared_ptr<boost::thread>(new boost::thread(boost :: bind(&Server :: Accept,this)));
+        this->this_thread = boost::shared_ptr<boost::thread>(new boost::thread([this] { Accept(); }));
     }
     catch(std :: exception &ex){
         cout << "Error" << std :: endl;
@@ -107,7 +107,7 @@ int Server :: Accept() {
             acceptor->accept(*socket);
             clients_sockets->push_back(socket);
             *value_of_connections = *value_of_connections + 1;
-            server_threads->create_thread(boost::bind(ClientSession, socket,clients_sockets,clients_sockets->size(),logged_clients,value_of_logged_clients));
+            server_threads->create_thread([socket, this, capture0 = clients_sockets->size()] { return ClientSession(socket, clients_sockets, capture0, logged_clients, value_of_logged_clients); });
         }
     }catch(boost :: system :: error_code &ec){
         return SERV_USER_EXIT;

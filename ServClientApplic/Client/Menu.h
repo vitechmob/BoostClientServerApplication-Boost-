@@ -45,6 +45,7 @@ int LogMenu(){
 int UserMenu(socket_ptr socket){
     try {
         while (true) {
+            system("clear");
             cout << "1.Get info" << endl;
             cout << "2.Get books info" << endl;
             int choice;
@@ -60,6 +61,31 @@ int UserMenu(socket_ptr socket){
                         socket->receive(boost::asio::buffer(surname));
                         socket->receive(boost::asio::buffer(login));
                         std :: cout << "ID:" << id << "\nName:" << name << "\nSurname:" << surname << "\nLogin:" << login << std :: endl;
+                    }
+                    break;
+                case 2 : ;
+                    {
+                        char req[2] = {"2"};
+                        socket->send(boost :: asio :: buffer(req));
+                        char id[20],book_name[20],author_name[20],author_surname[20],size[20];
+                        socket->receive(boost :: asio :: buffer(size));
+                        cout << size;
+                        if(atoi(size) == 1){
+                            char ans[20];
+                            socket->receive(boost :: asio :: buffer(ans));
+                            if(ans == "err"){
+                                cout << "Error,there is no books in DB" << endl;
+                                continue;
+                            }
+                        }
+                        for(int i = 0;i < atoi(size);i++){
+                            socket->receive(boost :: asio :: buffer(id));
+                            socket->receive(boost :: asio :: buffer(book_name));
+                            socket->receive(boost :: asio :: buffer(author_name));
+                            socket->receive(boost :: asio :: buffer(author_surname));
+                            std :: cout << "Book id:" << id << "\nBook name:" << book_name << "\nAuthor name:" << author_name
+                                        << "\nAuthor surname:" << author_surname << endl;
+                        }
                     }
                     break;
             }
