@@ -116,7 +116,7 @@ std :: map<int,BookInfo> BooksMap(){
             cout << " (MySQL error code: " << e.getErrorCode();
             cout << ", SQLState: " << e.getSQLState() << " )" << endl;
             std :: map<int,BookInfo> m;
-            m.insert(std :: pair<int,BookInfo>(-5,BookInfo(1,"err","err","err")));
+            m.insert(std :: pair<int,BookInfo>(-5,BookInfo(-5,"err","err","err")));
             return m;
         }
     }

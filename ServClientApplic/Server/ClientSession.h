@@ -117,13 +117,17 @@ int UserMenu(Client client,socket_ptr socket){
                     uint64_t size = books.size();
                     char sizeT[20];
                     sprintf(sizeT,"%lu",size);
-                    cout << sizeT;
+                    cout << sizeT << endl;
+                    cout << "123\n";
                     socket->send(boost :: asio :: buffer(sizeT));
-                    if(books.at(0).ID == -5){
-                        socket->send(boost :: asio :: buffer("err"));
+                    cout << "256\n";
+                    if(atoi(sizeT) == 1){
+                        if(books.begin()->first == -5) {
+                            socket->send(boost::asio::buffer("err"));
+                        }
                     }
                     else {
-                        cout << "Success" << endl;
+                        cout << "success\n" << endl;
                         for (const auto &[id, bk]: books) {
                             BookBuffer bkBuff(bk);
                             socket->send(boost :: asio :: buffer(bkBuff.book_ID));
