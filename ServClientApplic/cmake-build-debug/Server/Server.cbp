@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Server"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Client\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Boost-1.71.0\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_headers-1.71.0\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_thread-1.71.0\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_atomic-1.71.0\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_system-1.71.0\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_unit_test_framework-1.71.0\;CMake Files\Server\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Server">
+				<Option output="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server/Server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_GLIBCXX_USE_CXX11_ABI=0"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add option="-DBOOST_ATOMIC_DYN_LINK"/>
+					<Add option="-DBOOST_ALL_NO_LIB"/>
+					<Add option="-DBOOST_SYSTEM_DYN_LINK"/>
+					<Add directory="/home/xink/Загрузки/connectorSQL/include/jdbc"/>
+					<Add directory="/home/xink/Загрузки/connectorSQL/include"/>
+					<Add directory="/home/xink/Загрузки/connectorSQL/include/jdbc/cppconn"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server/Makefile&quot;  VERBOSE=1 Server"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Server/fast">
+				<Option output="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server/Server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_GLIBCXX_USE_CXX11_ABI=0"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add option="-DBOOST_ATOMIC_DYN_LINK"/>
+					<Add option="-DBOOST_ALL_NO_LIB"/>
+					<Add option="-DBOOST_SYSTEM_DYN_LINK"/>
+					<Add directory="/home/xink/Загрузки/connectorSQL/include/jdbc"/>
+					<Add directory="/home/xink/Загрузки/connectorSQL/include"/>
+					<Add directory="/home/xink/Загрузки/connectorSQL/include/jdbc/cppconn"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server/Makefile&quot;  VERBOSE=1 Server/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Author.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Author.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Book.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Book.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Buffs.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Client.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Client.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/ClientSession.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/DataBase.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Global.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Order.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Order.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Person.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Person.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Server.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Server.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Buffs.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/DataBase.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/SessionLib.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/main.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Client/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Client\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/BoostDetectToolset-1.71.0.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Boost-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Boost-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0/boost_headers-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_headers-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0/boost_headers-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_headers-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_thread-1.71.0/boost_thread-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_thread-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_thread-1.71.0/boost_thread-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_thread-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_thread-1.71.0/libboost_thread-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_thread-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_thread-1.71.0/libboost_thread-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_thread-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.71.0/boost_atomic-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_atomic-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.71.0/boost_atomic-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_atomic-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.71.0/libboost_atomic-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_atomic-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.71.0/libboost_atomic-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_atomic-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_system-1.71.0/boost_system-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_system-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_system-1.71.0/boost_system-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_system-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_system-1.71.0/libboost_system-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_system-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_system-1.71.0/libboost_system-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_system-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_unit_test_framework-1.71.0/boost_unit_test_framework-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_unit_test_framework-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_unit_test_framework-1.71.0/boost_unit_test_framework-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_unit_test_framework-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_unit_test_framework-1.71.0/libboost_unit_test_framework-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_unit_test_framework-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_unit_test_framework-1.71.0/libboost_unit_test_framework-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_unit_test_framework-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Server\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

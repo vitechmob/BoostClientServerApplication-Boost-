@@ -48,8 +48,8 @@ typedef boost :: shared_ptr<boost :: asio :: ip :: tcp :: socket> socket_ptr;
 
 using std :: cout, std :: cin, std :: cerr,std :: endl;
 
-std :: vector<Client> clients;
-std :: vector<socket_ptr> connections;
+static std :: vector<Client> clients;
+static std :: vector<socket_ptr> connections;
 
 #ifndef SERVCLIENTAPPLIC_INCLUDE_H
 #define SERVCLIENTAPPLIC_INCLUDE_H

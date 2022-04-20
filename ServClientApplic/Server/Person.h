@@ -4,6 +4,9 @@
 #pragma once
 #ifndef SERVCLIENTAPPLIC_PERSON_H
 #define SERVCLIENTAPPLIC_PERSON_H
+#include <boost/shared_ptr.hpp>
+#include <string>
+#include <iostream>
 
 class Person{
 protected:
@@ -22,26 +25,5 @@ public:
     explicit Person(const Person&);
     virtual ~Person();
 };
-
-Person :: Person(){
-    this->name = boost :: shared_ptr<std :: string>(new std :: string);
-    this->surname = boost :: shared_ptr<std :: string>(new std :: string);
-}
-
-Person ::Person(std :: string name,std :: string surname) {
-    this->name = boost :: shared_ptr<std :: string>(new std :: string);
-    this->surname = boost :: shared_ptr<std :: string>(new std :: string);
-    *this->name = name;
-    *this->surname = surname;
-}
-Person :: Person(const Person &pers){
-    this->name = boost :: shared_ptr<std :: string>(new std :: string);
-    this->surname = boost :: shared_ptr<std :: string>(new std :: string);
-    *this->name = *pers.name;
-    *this->surname = *pers.surname;
-}
-Person :: ~Person(){
-    std :: cout << "Person destructor\n" << std :: endl;
-}
 
 #endif //SERVCLIENTAPPLIC_PERSON_H
