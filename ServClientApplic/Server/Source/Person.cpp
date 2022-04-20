@@ -2,7 +2,7 @@
 // Created by xink on 20.04.22.
 //
 
-#include "Person.h"
+#include "../Person.h"
 
 Person :: Person(){
     this->name = boost :: shared_ptr<std :: string>(new std :: string);

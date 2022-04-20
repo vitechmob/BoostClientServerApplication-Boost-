@@ -2,7 +2,7 @@
 // Created by xink on 20.04.22.
 //
 
-#include "Server.h"
+#include "../Server.h"
 
 Server :: Server(boost :: asio :: ip :: address servIP,int port){
     try{

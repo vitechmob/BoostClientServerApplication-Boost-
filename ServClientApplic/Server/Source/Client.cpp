@@ -2,7 +2,7 @@
 // Created by xink on 20.04.22.
 //
 
-#include "Client.h"
+#include "../Client.h"
 
 
 Client ::Client() : Person(){

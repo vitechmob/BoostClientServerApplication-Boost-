@@ -2,7 +2,7 @@
 // Created by xink on 20.04.22.
 //
 
-#include "Book.h"
+#include "../Book.h"
 
 Book :: Book(){
     this->id = boost :: shared_ptr<int>(new int);

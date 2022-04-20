@@ -2,7 +2,7 @@
 // Created by xink on 20.04.22.
 //
 
-#include "Author.h"
+#include "../Author.h"
 
 
 Author :: Author() : Person() {

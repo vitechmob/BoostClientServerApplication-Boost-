@@ -130,149 +130,53 @@ Server/fast:
 	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/build
 .PHONY : Server/fast
 
-Author.o: Author.cpp.o
-.PHONY : Author.o
+Source/Author.o: Source/Author.cpp.o
+.PHONY : Source/Author.o
 
 # target to build an object file
-Author.cpp.o:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Author.cpp.o
-.PHONY : Author.cpp.o
+Source/Author.cpp.o:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Author.cpp.o
+.PHONY : Source/Author.cpp.o
 
-Author.i: Author.cpp.i
-.PHONY : Author.i
+Source/Author.i: Source/Author.cpp.i
+.PHONY : Source/Author.i
 
 # target to preprocess a source file
-Author.cpp.i:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Author.cpp.i
-.PHONY : Author.cpp.i
+Source/Author.cpp.i:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Author.cpp.i
+.PHONY : Source/Author.cpp.i
 
-Author.s: Author.cpp.s
-.PHONY : Author.s
+Source/Author.s: Source/Author.cpp.s
+.PHONY : Source/Author.s
 
 # target to generate assembly for a file
-Author.cpp.s:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Author.cpp.s
-.PHONY : Author.cpp.s
+Source/Author.cpp.s:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Author.cpp.s
+.PHONY : Source/Author.cpp.s
 
-Book.o: Book.cpp.o
-.PHONY : Book.o
+Source/Book.o: Source/Book.cpp.o
+.PHONY : Source/Book.o
 
 # target to build an object file
-Book.cpp.o:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Book.cpp.o
-.PHONY : Book.cpp.o
+Source/Book.cpp.o:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Book.cpp.o
+.PHONY : Source/Book.cpp.o
 
-Book.i: Book.cpp.i
-.PHONY : Book.i
-
-# target to preprocess a source file
-Book.cpp.i:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Book.cpp.i
-.PHONY : Book.cpp.i
-
-Book.s: Book.cpp.s
-.PHONY : Book.s
-
-# target to generate assembly for a file
-Book.cpp.s:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Book.cpp.s
-.PHONY : Book.cpp.s
-
-Client.o: Client.cpp.o
-.PHONY : Client.o
-
-# target to build an object file
-Client.cpp.o:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Client.cpp.o
-.PHONY : Client.cpp.o
-
-Client.i: Client.cpp.i
-.PHONY : Client.i
+Source/Book.i: Source/Book.cpp.i
+.PHONY : Source/Book.i
 
 # target to preprocess a source file
-Client.cpp.i:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Client.cpp.i
-.PHONY : Client.cpp.i
+Source/Book.cpp.i:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Book.cpp.i
+.PHONY : Source/Book.cpp.i
 
-Client.s: Client.cpp.s
-.PHONY : Client.s
-
-# target to generate assembly for a file
-Client.cpp.s:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Client.cpp.s
-.PHONY : Client.cpp.s
-
-Order.o: Order.cpp.o
-.PHONY : Order.o
-
-# target to build an object file
-Order.cpp.o:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Order.cpp.o
-.PHONY : Order.cpp.o
-
-Order.i: Order.cpp.i
-.PHONY : Order.i
-
-# target to preprocess a source file
-Order.cpp.i:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Order.cpp.i
-.PHONY : Order.cpp.i
-
-Order.s: Order.cpp.s
-.PHONY : Order.s
+Source/Book.s: Source/Book.cpp.s
+.PHONY : Source/Book.s
 
 # target to generate assembly for a file
-Order.cpp.s:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Order.cpp.s
-.PHONY : Order.cpp.s
-
-Person.o: Person.cpp.o
-.PHONY : Person.o
-
-# target to build an object file
-Person.cpp.o:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Person.cpp.o
-.PHONY : Person.cpp.o
-
-Person.i: Person.cpp.i
-.PHONY : Person.i
-
-# target to preprocess a source file
-Person.cpp.i:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Person.cpp.i
-.PHONY : Person.cpp.i
-
-Person.s: Person.cpp.s
-.PHONY : Person.s
-
-# target to generate assembly for a file
-Person.cpp.s:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Person.cpp.s
-.PHONY : Person.cpp.s
-
-Server.o: Server.cpp.o
-.PHONY : Server.o
-
-# target to build an object file
-Server.cpp.o:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Server.cpp.o
-.PHONY : Server.cpp.o
-
-Server.i: Server.cpp.i
-.PHONY : Server.i
-
-# target to preprocess a source file
-Server.cpp.i:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Server.cpp.i
-.PHONY : Server.cpp.i
-
-Server.s: Server.cpp.s
-.PHONY : Server.s
-
-# target to generate assembly for a file
-Server.cpp.s:
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Server.cpp.s
-.PHONY : Server.cpp.s
+Source/Book.cpp.s:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Book.cpp.s
+.PHONY : Source/Book.cpp.s
 
 Source/Buffs.o: Source/Buffs.cpp.o
 .PHONY : Source/Buffs.o
@@ -298,6 +202,30 @@ Source/Buffs.cpp.s:
 	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Buffs.cpp.s
 .PHONY : Source/Buffs.cpp.s
 
+Source/Client.o: Source/Client.cpp.o
+.PHONY : Source/Client.o
+
+# target to build an object file
+Source/Client.cpp.o:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Client.cpp.o
+.PHONY : Source/Client.cpp.o
+
+Source/Client.i: Source/Client.cpp.i
+.PHONY : Source/Client.i
+
+# target to preprocess a source file
+Source/Client.cpp.i:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Client.cpp.i
+.PHONY : Source/Client.cpp.i
+
+Source/Client.s: Source/Client.cpp.s
+.PHONY : Source/Client.s
+
+# target to generate assembly for a file
+Source/Client.cpp.s:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Client.cpp.s
+.PHONY : Source/Client.cpp.s
+
 Source/DataBase.o: Source/DataBase.cpp.o
 .PHONY : Source/DataBase.o
 
@@ -321,6 +249,78 @@ Source/DataBase.s: Source/DataBase.cpp.s
 Source/DataBase.cpp.s:
 	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/DataBase.cpp.s
 .PHONY : Source/DataBase.cpp.s
+
+Source/Order.o: Source/Order.cpp.o
+.PHONY : Source/Order.o
+
+# target to build an object file
+Source/Order.cpp.o:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Order.cpp.o
+.PHONY : Source/Order.cpp.o
+
+Source/Order.i: Source/Order.cpp.i
+.PHONY : Source/Order.i
+
+# target to preprocess a source file
+Source/Order.cpp.i:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Order.cpp.i
+.PHONY : Source/Order.cpp.i
+
+Source/Order.s: Source/Order.cpp.s
+.PHONY : Source/Order.s
+
+# target to generate assembly for a file
+Source/Order.cpp.s:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Order.cpp.s
+.PHONY : Source/Order.cpp.s
+
+Source/Person.o: Source/Person.cpp.o
+.PHONY : Source/Person.o
+
+# target to build an object file
+Source/Person.cpp.o:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Person.cpp.o
+.PHONY : Source/Person.cpp.o
+
+Source/Person.i: Source/Person.cpp.i
+.PHONY : Source/Person.i
+
+# target to preprocess a source file
+Source/Person.cpp.i:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Person.cpp.i
+.PHONY : Source/Person.cpp.i
+
+Source/Person.s: Source/Person.cpp.s
+.PHONY : Source/Person.s
+
+# target to generate assembly for a file
+Source/Person.cpp.s:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Person.cpp.s
+.PHONY : Source/Person.cpp.s
+
+Source/Server.o: Source/Server.cpp.o
+.PHONY : Source/Server.o
+
+# target to build an object file
+Source/Server.cpp.o:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Server.cpp.o
+.PHONY : Source/Server.cpp.o
+
+Source/Server.i: Source/Server.cpp.i
+.PHONY : Source/Server.i
+
+# target to preprocess a source file
+Source/Server.cpp.i:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Server.cpp.i
+.PHONY : Source/Server.cpp.i
+
+Source/Server.s: Source/Server.cpp.s
+.PHONY : Source/Server.s
+
+# target to generate assembly for a file
+Source/Server.cpp.s:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/Source/Server.cpp.s
+.PHONY : Source/Server.cpp.s
 
 Source/SessionLib.o: Source/SessionLib.cpp.o
 .PHONY : Source/SessionLib.o
@@ -379,30 +379,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Server"
-	@echo "... Author.o"
-	@echo "... Author.i"
-	@echo "... Author.s"
-	@echo "... Book.o"
-	@echo "... Book.i"
-	@echo "... Book.s"
-	@echo "... Client.o"
-	@echo "... Client.i"
-	@echo "... Client.s"
-	@echo "... Order.o"
-	@echo "... Order.i"
-	@echo "... Order.s"
-	@echo "... Person.o"
-	@echo "... Person.i"
-	@echo "... Person.s"
-	@echo "... Server.o"
-	@echo "... Server.i"
-	@echo "... Server.s"
+	@echo "... Source/Author.o"
+	@echo "... Source/Author.i"
+	@echo "... Source/Author.s"
+	@echo "... Source/Book.o"
+	@echo "... Source/Book.i"
+	@echo "... Source/Book.s"
 	@echo "... Source/Buffs.o"
 	@echo "... Source/Buffs.i"
 	@echo "... Source/Buffs.s"
+	@echo "... Source/Client.o"
+	@echo "... Source/Client.i"
+	@echo "... Source/Client.s"
 	@echo "... Source/DataBase.o"
 	@echo "... Source/DataBase.i"
 	@echo "... Source/DataBase.s"
+	@echo "... Source/Order.o"
+	@echo "... Source/Order.i"
+	@echo "... Source/Order.s"
+	@echo "... Source/Person.o"
+	@echo "... Source/Person.i"
+	@echo "... Source/Person.s"
+	@echo "... Source/Server.o"
+	@echo "... Source/Server.i"
+	@echo "... Source/Server.s"
 	@echo "... Source/SessionLib.o"
 	@echo "... Source/SessionLib.i"
 	@echo "... Source/SessionLib.s"

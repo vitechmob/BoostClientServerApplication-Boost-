@@ -78,22 +78,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Author.cpp">
-			<Option target="Server"/>
-		</Unit>
 		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Author.h">
-			<Option target="Server"/>
-		</Unit>
-		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Book.cpp">
 			<Option target="Server"/>
 		</Unit>
 		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Book.h">
 			<Option target="Server"/>
 		</Unit>
 		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Buffs.h">
-			<Option target="Server"/>
-		</Unit>
-		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Client.cpp">
 			<Option target="Server"/>
 		</Unit>
 		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Client.h">
@@ -108,28 +99,37 @@
 		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Global.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Order.cpp">
-			<Option target="Server"/>
-		</Unit>
 		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Order.h">
-			<Option target="Server"/>
-		</Unit>
-		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Person.cpp">
 			<Option target="Server"/>
 		</Unit>
 		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Person.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Server.cpp">
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Server.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Server.h">
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Author.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Book.cpp">
 			<Option target="Server"/>
 		</Unit>
 		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Buffs.cpp">
 			<Option target="Server"/>
 		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Client.cpp">
+			<Option target="Server"/>
+		</Unit>
 		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/DataBase.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Order.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Person.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Server.cpp">
 			<Option target="Server"/>
 		</Unit>
 		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/SessionLib.cpp">

@@ -3,7 +3,7 @@ project(Server)
 
 add_definitions(-D_GLIBCXX_USE_CXX11_ABI=0)
 
-add_executable(${PROJECT_NAME} main.cpp ClientSession.h Global.h DataBase.h Client.h Server.h Order.h Book.h Person.h Author.h Server.cpp Person.cpp Client.cpp Book.cpp Author.cpp Order.cpp Source/SessionLib.cpp Source/Buffs.cpp Source/DataBase.cpp Buffs.h)
+add_executable(${PROJECT_NAME} main.cpp ClientSession.h Global.h DataBase.h Client.h Server.h Order.h Book.h Person.h Author.h Source/Server.cpp Source/Person.cpp Source/Client.cpp Source/Book.cpp Source/Author.cpp Source/Order.cpp Source/SessionLib.cpp Source/Buffs.cpp Source/DataBase.cpp Buffs.h)
 
 set(CMAKE_CXX_STANDARD 23)
 set(Boost_USE_STATIC_LIBS OFF)

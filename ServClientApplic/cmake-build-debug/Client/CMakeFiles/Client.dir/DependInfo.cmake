@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Client/Source/Menu.cpp" "Client/CMakeFiles/Client.dir/Source/Menu.cpp.o" "gcc" "Client/CMakeFiles/Client.dir/Source/Menu.cpp.o.d"
+  "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Client/Source/Session.cpp" "Client/CMakeFiles/Client.dir/Source/Session.cpp.o" "gcc" "Client/CMakeFiles/Client.dir/Source/Session.cpp.o.d"
   "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Client/main.cpp" "Client/CMakeFiles/Client.dir/main.cpp.o" "gcc" "Client/CMakeFiles/Client.dir/main.cpp.o.d"
   )
 

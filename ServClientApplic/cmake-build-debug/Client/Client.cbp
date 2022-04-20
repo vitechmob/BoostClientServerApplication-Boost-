@@ -70,10 +70,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Client/Global.h">
+			<Option target="Client"/>
+		</Unit>
 		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Client/Menu.h">
 			<Option target="Client"/>
 		</Unit>
 		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Client/Session.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Client/Source/Menu.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Client/Source/Session.cpp">
 			<Option target="Client"/>
 		</Unit>
 		<Unit filename="/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Client/main.cpp">

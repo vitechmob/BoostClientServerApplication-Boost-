@@ -130,6 +130,54 @@ Client/fast:
 	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Client/CMakeFiles/Client.dir/build.make Client/CMakeFiles/Client.dir/build
 .PHONY : Client/fast
 
+Source/Menu.o: Source/Menu.cpp.o
+.PHONY : Source/Menu.o
+
+# target to build an object file
+Source/Menu.cpp.o:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Client/CMakeFiles/Client.dir/build.make Client/CMakeFiles/Client.dir/Source/Menu.cpp.o
+.PHONY : Source/Menu.cpp.o
+
+Source/Menu.i: Source/Menu.cpp.i
+.PHONY : Source/Menu.i
+
+# target to preprocess a source file
+Source/Menu.cpp.i:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Client/CMakeFiles/Client.dir/build.make Client/CMakeFiles/Client.dir/Source/Menu.cpp.i
+.PHONY : Source/Menu.cpp.i
+
+Source/Menu.s: Source/Menu.cpp.s
+.PHONY : Source/Menu.s
+
+# target to generate assembly for a file
+Source/Menu.cpp.s:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Client/CMakeFiles/Client.dir/build.make Client/CMakeFiles/Client.dir/Source/Menu.cpp.s
+.PHONY : Source/Menu.cpp.s
+
+Source/Session.o: Source/Session.cpp.o
+.PHONY : Source/Session.o
+
+# target to build an object file
+Source/Session.cpp.o:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Client/CMakeFiles/Client.dir/build.make Client/CMakeFiles/Client.dir/Source/Session.cpp.o
+.PHONY : Source/Session.cpp.o
+
+Source/Session.i: Source/Session.cpp.i
+.PHONY : Source/Session.i
+
+# target to preprocess a source file
+Source/Session.cpp.i:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Client/CMakeFiles/Client.dir/build.make Client/CMakeFiles/Client.dir/Source/Session.cpp.i
+.PHONY : Source/Session.cpp.i
+
+Source/Session.s: Source/Session.cpp.s
+.PHONY : Source/Session.s
+
+# target to generate assembly for a file
+Source/Session.cpp.s:
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Client/CMakeFiles/Client.dir/build.make Client/CMakeFiles/Client.dir/Source/Session.cpp.s
+.PHONY : Source/Session.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -163,6 +211,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Client"
+	@echo "... Source/Menu.o"
+	@echo "... Source/Menu.i"
+	@echo "... Source/Menu.s"
+	@echo "... Source/Session.o"
+	@echo "... Source/Session.i"
+	@echo "... Source/Session.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

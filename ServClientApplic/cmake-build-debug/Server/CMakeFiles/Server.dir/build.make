@@ -83,89 +83,89 @@ Server/CMakeFiles/Server.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/main.cpp.s"
 	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/main.cpp -o CMakeFiles/Server.dir/main.cpp.s
 
-Server/CMakeFiles/Server.dir/Server.cpp.o: Server/CMakeFiles/Server.dir/flags.make
-Server/CMakeFiles/Server.dir/Server.cpp.o: ../Server/Server.cpp
-Server/CMakeFiles/Server.dir/Server.cpp.o: Server/CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Server/CMakeFiles/Server.dir/Server.cpp.o"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Server/CMakeFiles/Server.dir/Server.cpp.o -MF CMakeFiles/Server.dir/Server.cpp.o.d -o CMakeFiles/Server.dir/Server.cpp.o -c /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Server.cpp
+Server/CMakeFiles/Server.dir/Source/Server.cpp.o: Server/CMakeFiles/Server.dir/flags.make
+Server/CMakeFiles/Server.dir/Source/Server.cpp.o: ../Server/Source/Server.cpp
+Server/CMakeFiles/Server.dir/Source/Server.cpp.o: Server/CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Server/CMakeFiles/Server.dir/Source/Server.cpp.o"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Server/CMakeFiles/Server.dir/Source/Server.cpp.o -MF CMakeFiles/Server.dir/Source/Server.cpp.o.d -o CMakeFiles/Server.dir/Source/Server.cpp.o -c /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Server.cpp
 
-Server/CMakeFiles/Server.dir/Server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Server.cpp.i"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Server.cpp > CMakeFiles/Server.dir/Server.cpp.i
+Server/CMakeFiles/Server.dir/Source/Server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Source/Server.cpp.i"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Server.cpp > CMakeFiles/Server.dir/Source/Server.cpp.i
 
-Server/CMakeFiles/Server.dir/Server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Server.cpp.s"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Server.cpp -o CMakeFiles/Server.dir/Server.cpp.s
+Server/CMakeFiles/Server.dir/Source/Server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Source/Server.cpp.s"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Server.cpp -o CMakeFiles/Server.dir/Source/Server.cpp.s
 
-Server/CMakeFiles/Server.dir/Person.cpp.o: Server/CMakeFiles/Server.dir/flags.make
-Server/CMakeFiles/Server.dir/Person.cpp.o: ../Server/Person.cpp
-Server/CMakeFiles/Server.dir/Person.cpp.o: Server/CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Server/CMakeFiles/Server.dir/Person.cpp.o"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Server/CMakeFiles/Server.dir/Person.cpp.o -MF CMakeFiles/Server.dir/Person.cpp.o.d -o CMakeFiles/Server.dir/Person.cpp.o -c /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Person.cpp
+Server/CMakeFiles/Server.dir/Source/Person.cpp.o: Server/CMakeFiles/Server.dir/flags.make
+Server/CMakeFiles/Server.dir/Source/Person.cpp.o: ../Server/Source/Person.cpp
+Server/CMakeFiles/Server.dir/Source/Person.cpp.o: Server/CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Server/CMakeFiles/Server.dir/Source/Person.cpp.o"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Server/CMakeFiles/Server.dir/Source/Person.cpp.o -MF CMakeFiles/Server.dir/Source/Person.cpp.o.d -o CMakeFiles/Server.dir/Source/Person.cpp.o -c /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Person.cpp
 
-Server/CMakeFiles/Server.dir/Person.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Person.cpp.i"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Person.cpp > CMakeFiles/Server.dir/Person.cpp.i
+Server/CMakeFiles/Server.dir/Source/Person.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Source/Person.cpp.i"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Person.cpp > CMakeFiles/Server.dir/Source/Person.cpp.i
 
-Server/CMakeFiles/Server.dir/Person.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Person.cpp.s"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Person.cpp -o CMakeFiles/Server.dir/Person.cpp.s
+Server/CMakeFiles/Server.dir/Source/Person.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Source/Person.cpp.s"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Person.cpp -o CMakeFiles/Server.dir/Source/Person.cpp.s
 
-Server/CMakeFiles/Server.dir/Client.cpp.o: Server/CMakeFiles/Server.dir/flags.make
-Server/CMakeFiles/Server.dir/Client.cpp.o: ../Server/Client.cpp
-Server/CMakeFiles/Server.dir/Client.cpp.o: Server/CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Server/CMakeFiles/Server.dir/Client.cpp.o"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Server/CMakeFiles/Server.dir/Client.cpp.o -MF CMakeFiles/Server.dir/Client.cpp.o.d -o CMakeFiles/Server.dir/Client.cpp.o -c /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Client.cpp
+Server/CMakeFiles/Server.dir/Source/Client.cpp.o: Server/CMakeFiles/Server.dir/flags.make
+Server/CMakeFiles/Server.dir/Source/Client.cpp.o: ../Server/Source/Client.cpp
+Server/CMakeFiles/Server.dir/Source/Client.cpp.o: Server/CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Server/CMakeFiles/Server.dir/Source/Client.cpp.o"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Server/CMakeFiles/Server.dir/Source/Client.cpp.o -MF CMakeFiles/Server.dir/Source/Client.cpp.o.d -o CMakeFiles/Server.dir/Source/Client.cpp.o -c /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Client.cpp
 
-Server/CMakeFiles/Server.dir/Client.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Client.cpp.i"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Client.cpp > CMakeFiles/Server.dir/Client.cpp.i
+Server/CMakeFiles/Server.dir/Source/Client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Source/Client.cpp.i"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Client.cpp > CMakeFiles/Server.dir/Source/Client.cpp.i
 
-Server/CMakeFiles/Server.dir/Client.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Client.cpp.s"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Client.cpp -o CMakeFiles/Server.dir/Client.cpp.s
+Server/CMakeFiles/Server.dir/Source/Client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Source/Client.cpp.s"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Client.cpp -o CMakeFiles/Server.dir/Source/Client.cpp.s
 
-Server/CMakeFiles/Server.dir/Book.cpp.o: Server/CMakeFiles/Server.dir/flags.make
-Server/CMakeFiles/Server.dir/Book.cpp.o: ../Server/Book.cpp
-Server/CMakeFiles/Server.dir/Book.cpp.o: Server/CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Server/CMakeFiles/Server.dir/Book.cpp.o"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Server/CMakeFiles/Server.dir/Book.cpp.o -MF CMakeFiles/Server.dir/Book.cpp.o.d -o CMakeFiles/Server.dir/Book.cpp.o -c /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Book.cpp
+Server/CMakeFiles/Server.dir/Source/Book.cpp.o: Server/CMakeFiles/Server.dir/flags.make
+Server/CMakeFiles/Server.dir/Source/Book.cpp.o: ../Server/Source/Book.cpp
+Server/CMakeFiles/Server.dir/Source/Book.cpp.o: Server/CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Server/CMakeFiles/Server.dir/Source/Book.cpp.o"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Server/CMakeFiles/Server.dir/Source/Book.cpp.o -MF CMakeFiles/Server.dir/Source/Book.cpp.o.d -o CMakeFiles/Server.dir/Source/Book.cpp.o -c /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Book.cpp
 
-Server/CMakeFiles/Server.dir/Book.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Book.cpp.i"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Book.cpp > CMakeFiles/Server.dir/Book.cpp.i
+Server/CMakeFiles/Server.dir/Source/Book.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Source/Book.cpp.i"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Book.cpp > CMakeFiles/Server.dir/Source/Book.cpp.i
 
-Server/CMakeFiles/Server.dir/Book.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Book.cpp.s"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Book.cpp -o CMakeFiles/Server.dir/Book.cpp.s
+Server/CMakeFiles/Server.dir/Source/Book.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Source/Book.cpp.s"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Book.cpp -o CMakeFiles/Server.dir/Source/Book.cpp.s
 
-Server/CMakeFiles/Server.dir/Author.cpp.o: Server/CMakeFiles/Server.dir/flags.make
-Server/CMakeFiles/Server.dir/Author.cpp.o: ../Server/Author.cpp
-Server/CMakeFiles/Server.dir/Author.cpp.o: Server/CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Server/CMakeFiles/Server.dir/Author.cpp.o"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Server/CMakeFiles/Server.dir/Author.cpp.o -MF CMakeFiles/Server.dir/Author.cpp.o.d -o CMakeFiles/Server.dir/Author.cpp.o -c /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Author.cpp
+Server/CMakeFiles/Server.dir/Source/Author.cpp.o: Server/CMakeFiles/Server.dir/flags.make
+Server/CMakeFiles/Server.dir/Source/Author.cpp.o: ../Server/Source/Author.cpp
+Server/CMakeFiles/Server.dir/Source/Author.cpp.o: Server/CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Server/CMakeFiles/Server.dir/Source/Author.cpp.o"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Server/CMakeFiles/Server.dir/Source/Author.cpp.o -MF CMakeFiles/Server.dir/Source/Author.cpp.o.d -o CMakeFiles/Server.dir/Source/Author.cpp.o -c /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Author.cpp
 
-Server/CMakeFiles/Server.dir/Author.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Author.cpp.i"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Author.cpp > CMakeFiles/Server.dir/Author.cpp.i
+Server/CMakeFiles/Server.dir/Source/Author.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Source/Author.cpp.i"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Author.cpp > CMakeFiles/Server.dir/Source/Author.cpp.i
 
-Server/CMakeFiles/Server.dir/Author.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Author.cpp.s"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Author.cpp -o CMakeFiles/Server.dir/Author.cpp.s
+Server/CMakeFiles/Server.dir/Source/Author.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Source/Author.cpp.s"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Author.cpp -o CMakeFiles/Server.dir/Source/Author.cpp.s
 
-Server/CMakeFiles/Server.dir/Order.cpp.o: Server/CMakeFiles/Server.dir/flags.make
-Server/CMakeFiles/Server.dir/Order.cpp.o: ../Server/Order.cpp
-Server/CMakeFiles/Server.dir/Order.cpp.o: Server/CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Server/CMakeFiles/Server.dir/Order.cpp.o"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Server/CMakeFiles/Server.dir/Order.cpp.o -MF CMakeFiles/Server.dir/Order.cpp.o.d -o CMakeFiles/Server.dir/Order.cpp.o -c /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Order.cpp
+Server/CMakeFiles/Server.dir/Source/Order.cpp.o: Server/CMakeFiles/Server.dir/flags.make
+Server/CMakeFiles/Server.dir/Source/Order.cpp.o: ../Server/Source/Order.cpp
+Server/CMakeFiles/Server.dir/Source/Order.cpp.o: Server/CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Server/CMakeFiles/Server.dir/Source/Order.cpp.o"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Server/CMakeFiles/Server.dir/Source/Order.cpp.o -MF CMakeFiles/Server.dir/Source/Order.cpp.o.d -o CMakeFiles/Server.dir/Source/Order.cpp.o -c /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Order.cpp
 
-Server/CMakeFiles/Server.dir/Order.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Order.cpp.i"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Order.cpp > CMakeFiles/Server.dir/Order.cpp.i
+Server/CMakeFiles/Server.dir/Source/Order.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Source/Order.cpp.i"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Order.cpp > CMakeFiles/Server.dir/Source/Order.cpp.i
 
-Server/CMakeFiles/Server.dir/Order.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Order.cpp.s"
-	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Order.cpp -o CMakeFiles/Server.dir/Order.cpp.s
+Server/CMakeFiles/Server.dir/Source/Order.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Source/Order.cpp.s"
+	cd /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/cmake-build-debug/Server && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Order.cpp -o CMakeFiles/Server.dir/Source/Order.cpp.s
 
 Server/CMakeFiles/Server.dir/Source/SessionLib.cpp.o: Server/CMakeFiles/Server.dir/flags.make
 Server/CMakeFiles/Server.dir/Source/SessionLib.cpp.o: ../Server/Source/SessionLib.cpp
@@ -212,12 +212,12 @@ Server/CMakeFiles/Server.dir/Source/DataBase.cpp.s: cmake_force
 # Object files for target Server
 Server_OBJECTS = \
 "CMakeFiles/Server.dir/main.cpp.o" \
-"CMakeFiles/Server.dir/Server.cpp.o" \
-"CMakeFiles/Server.dir/Person.cpp.o" \
-"CMakeFiles/Server.dir/Client.cpp.o" \
-"CMakeFiles/Server.dir/Book.cpp.o" \
-"CMakeFiles/Server.dir/Author.cpp.o" \
-"CMakeFiles/Server.dir/Order.cpp.o" \
+"CMakeFiles/Server.dir/Source/Server.cpp.o" \
+"CMakeFiles/Server.dir/Source/Person.cpp.o" \
+"CMakeFiles/Server.dir/Source/Client.cpp.o" \
+"CMakeFiles/Server.dir/Source/Book.cpp.o" \
+"CMakeFiles/Server.dir/Source/Author.cpp.o" \
+"CMakeFiles/Server.dir/Source/Order.cpp.o" \
 "CMakeFiles/Server.dir/Source/SessionLib.cpp.o" \
 "CMakeFiles/Server.dir/Source/Buffs.cpp.o" \
 "CMakeFiles/Server.dir/Source/DataBase.cpp.o"
@@ -226,12 +226,12 @@ Server_OBJECTS = \
 Server_EXTERNAL_OBJECTS =
 
 Server/Server: Server/CMakeFiles/Server.dir/main.cpp.o
-Server/Server: Server/CMakeFiles/Server.dir/Server.cpp.o
-Server/Server: Server/CMakeFiles/Server.dir/Person.cpp.o
-Server/Server: Server/CMakeFiles/Server.dir/Client.cpp.o
-Server/Server: Server/CMakeFiles/Server.dir/Book.cpp.o
-Server/Server: Server/CMakeFiles/Server.dir/Author.cpp.o
-Server/Server: Server/CMakeFiles/Server.dir/Order.cpp.o
+Server/Server: Server/CMakeFiles/Server.dir/Source/Server.cpp.o
+Server/Server: Server/CMakeFiles/Server.dir/Source/Person.cpp.o
+Server/Server: Server/CMakeFiles/Server.dir/Source/Client.cpp.o
+Server/Server: Server/CMakeFiles/Server.dir/Source/Book.cpp.o
+Server/Server: Server/CMakeFiles/Server.dir/Source/Author.cpp.o
+Server/Server: Server/CMakeFiles/Server.dir/Source/Order.cpp.o
 Server/Server: Server/CMakeFiles/Server.dir/Source/SessionLib.cpp.o
 Server/Server: Server/CMakeFiles/Server.dir/Source/Buffs.cpp.o
 Server/Server: Server/CMakeFiles/Server.dir/Source/DataBase.cpp.o

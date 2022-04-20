@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
 project(Client)
-add_executable(${PROJECT_NAME} main.cpp Session.h Menu.h)
+add_executable(${PROJECT_NAME} main.cpp Session.h Menu.h Global.h Source/Menu.cpp Source/Session.cpp)
 
 set(CMAKE_CXX_STANDARD 23)
 set(Boost_USE_STATIC_LIBS OFF)

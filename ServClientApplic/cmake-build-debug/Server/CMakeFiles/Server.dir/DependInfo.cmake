@@ -8,14 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Author.cpp" "Server/CMakeFiles/Server.dir/Author.cpp.o" "gcc" "Server/CMakeFiles/Server.dir/Author.cpp.o.d"
-  "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Book.cpp" "Server/CMakeFiles/Server.dir/Book.cpp.o" "gcc" "Server/CMakeFiles/Server.dir/Book.cpp.o.d"
-  "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Client.cpp" "Server/CMakeFiles/Server.dir/Client.cpp.o" "gcc" "Server/CMakeFiles/Server.dir/Client.cpp.o.d"
-  "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Order.cpp" "Server/CMakeFiles/Server.dir/Order.cpp.o" "gcc" "Server/CMakeFiles/Server.dir/Order.cpp.o.d"
-  "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Person.cpp" "Server/CMakeFiles/Server.dir/Person.cpp.o" "gcc" "Server/CMakeFiles/Server.dir/Person.cpp.o.d"
-  "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Server.cpp" "Server/CMakeFiles/Server.dir/Server.cpp.o" "gcc" "Server/CMakeFiles/Server.dir/Server.cpp.o.d"
+  "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Author.cpp" "Server/CMakeFiles/Server.dir/Source/Author.cpp.o" "gcc" "Server/CMakeFiles/Server.dir/Source/Author.cpp.o.d"
+  "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Book.cpp" "Server/CMakeFiles/Server.dir/Source/Book.cpp.o" "gcc" "Server/CMakeFiles/Server.dir/Source/Book.cpp.o.d"
   "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Buffs.cpp" "Server/CMakeFiles/Server.dir/Source/Buffs.cpp.o" "gcc" "Server/CMakeFiles/Server.dir/Source/Buffs.cpp.o.d"
+  "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Client.cpp" "Server/CMakeFiles/Server.dir/Source/Client.cpp.o" "gcc" "Server/CMakeFiles/Server.dir/Source/Client.cpp.o.d"
   "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/DataBase.cpp" "Server/CMakeFiles/Server.dir/Source/DataBase.cpp.o" "gcc" "Server/CMakeFiles/Server.dir/Source/DataBase.cpp.o.d"
+  "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Order.cpp" "Server/CMakeFiles/Server.dir/Source/Order.cpp.o" "gcc" "Server/CMakeFiles/Server.dir/Source/Order.cpp.o.d"
+  "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Person.cpp" "Server/CMakeFiles/Server.dir/Source/Person.cpp.o" "gcc" "Server/CMakeFiles/Server.dir/Source/Person.cpp.o.d"
+  "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Server.cpp" "Server/CMakeFiles/Server.dir/Source/Server.cpp.o" "gcc" "Server/CMakeFiles/Server.dir/Source/Server.cpp.o.d"
   "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/SessionLib.cpp" "Server/CMakeFiles/Server.dir/Source/SessionLib.cpp.o" "gcc" "Server/CMakeFiles/Server.dir/Source/SessionLib.cpp.o.d"
   "/home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/main.cpp" "Server/CMakeFiles/Server.dir/main.cpp.o" "gcc" "Server/CMakeFiles/Server.dir/main.cpp.o.d"
   )
