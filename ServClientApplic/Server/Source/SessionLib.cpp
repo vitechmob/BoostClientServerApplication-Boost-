@@ -136,6 +136,59 @@ bool CheckBack(char *buffer){
     }
 }
 
+int SortBy(socket_ptr socket,int sort_key,std :: map<int,BookInfo> &books){
+    switch(sort_key){
+        case 1 : ;
+            {
+                std::multimap<std::string, BookInfo> sorted_books;
+                for (const auto &[id, bk]: books) {
+                    sorted_books.insert(std::pair<std::string, BookInfo>(bk.book_name, bk));
+                }
+                for (const auto &[id, bk]: sorted_books) {
+                    BookBuffer bkBuff(bk);
+                    socket->send(boost::asio::buffer(bkBuff.book_ID));
+                    socket->send(boost::asio::buffer(bkBuff.book_name));
+                    socket->send(boost::asio::buffer(bkBuff.author_name));
+                    socket->send(boost::asio::buffer(bkBuff.author_surname));
+                }
+            }
+            break;
+        case 2 : ;
+            {
+                std::multimap<std::string, BookInfo> sorted_books;
+                for (const auto &[id, bk]: books) {
+                    sorted_books.insert(std::pair<std::string, BookInfo>(bk.author_name, bk));
+                }
+                for (const auto &[id, bk]: sorted_books) {
+                    BookBuffer bkBuff(bk);
+                    socket->send(boost::asio::buffer(bkBuff.book_ID));
+                    socket->send(boost::asio::buffer(bkBuff.book_name));
+                    socket->send(boost::asio::buffer(bkBuff.author_name));
+                    socket->send(boost::asio::buffer(bkBuff.author_surname));
+                }
+                for (const auto &[id, bk]: sorted_books) {
+                    std :: cout << id << " " << endl;
+                }
+            }
+            break;
+        case 3 : ;
+            {
+                std::multimap<std::string, BookInfo> sorted_books;
+                for (const auto &[id, bk]: books) {
+                    sorted_books.insert(std::pair<std::string, BookInfo>(bk.author_surname, bk));
+                }
+                for (const auto &[id, bk]: sorted_books) {
+                    BookBuffer bkBuff(bk);
+                    socket->send(boost::asio::buffer(bkBuff.book_ID));
+                    socket->send(boost::asio::buffer(bkBuff.book_name));
+                    socket->send(boost::asio::buffer(bkBuff.author_name));
+                    socket->send(boost::asio::buffer(bkBuff.author_surname));
+                }
+            }
+            break;
+    }
+    return SORT_SUCCESS;
+}
 
 int UserMenu(Client client,socket_ptr socket){
     while(true){
@@ -167,7 +220,6 @@ int UserMenu(Client client,socket_ptr socket){
                         }
                     }
                     else {
-                        cout << "success\n" << endl;
                         for (const auto &[id, bk]: books) {
                             BookBuffer bkBuff(bk);
                             socket->send(boost :: asio :: buffer(bkBuff.book_ID));
@@ -175,6 +227,48 @@ int UserMenu(Client client,socket_ptr socket){
                             socket->send(boost :: asio :: buffer(bkBuff.author_name));
                             socket->send(boost :: asio :: buffer(bkBuff.author_surname));
                         }
+                    }
+                    char buf[20];
+                    socket->receive(boost :: asio :: buffer(buf));
+                    switch(buf[0]){
+                        case '1' : ;
+                            {
+                                char rq[20];
+                                socket->receive(boost :: asio :: buffer(rq));
+                                switch(rq[0]){
+                                    case '1' : ;
+                                        {
+                                            SortBy(socket,1,books);
+                                        }
+                                        break;
+                                    case '2' : ;
+                                        {
+                                            SortBy(socket,2,books);
+                                        }
+                                        break;
+                                    case '3' : ;
+                                        {
+                                            SortBy(socket,3,books);
+                                        }
+                                        break;
+                                    default : ;
+                                        {
+
+                                        }
+                                        break;
+                                }
+                            }
+                            break;
+                        case '2' : ;
+                            {
+                                continue;
+                            }
+                            break;
+                        default : ;
+                            {
+
+                            }
+                            break;
                     }
                 }
                 break;

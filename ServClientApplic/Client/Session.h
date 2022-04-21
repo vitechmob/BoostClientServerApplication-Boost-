@@ -12,6 +12,7 @@
 int Register(socket_ptr socket);
 int LogIn(socket_ptr socket);
 bool CheckBack(char *);
-
 int Session(socket_ptr socket);
+void ShowBooksData(socket_ptr socket);
+
 #endif //SERVCLIENTAPPLIC_SESSION_H

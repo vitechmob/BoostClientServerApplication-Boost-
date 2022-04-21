@@ -6,6 +6,7 @@
 #include <boost/thread.hpp>
 #include <vector>
 #include <map>
+#include <unordered_map>
 #include <iostream>
 #include <cstdlib>
 #include <mysql_connection.h>
@@ -21,12 +22,11 @@
 #include "Person.h"
 #include "Author.h"
 
-
-#define LOCAL_HOST "127.0.0.1" 
+#define LOCAL_HOST "127.0.0.1"
 #define PORT 2001
-#define DATABASE_ADDRESS "tcp://127.0.0.1:3306" 
+#define DATABASE_ADDRESS "tcp://127.0.0.1:3306"
 #define USERNAME "root"
-#define PASSWORD "your_passw_to_data_base"
+#define PASSWORD "N2jjeh3aj752a3ec"
 
 #define SQL_SUCCESSFULLY_LOGGED 1
 #define SQL_CANT_LOGGED 2
@@ -43,13 +43,14 @@
 #define SERV_STOPPED 14
 #define SERV_STOP_ERROR 15
 #define USER_BACK 16
+#define SORT_SUCCESS 17
 
 typedef boost :: shared_ptr<boost :: asio :: ip :: tcp :: socket> socket_ptr;
 
 using std :: cout, std :: cin, std :: cerr,std :: endl;
 
-static std :: vector<Client> clients;  //users that are already logged in, to monitor their activity
-static std :: vector<socket_ptr> connections; //connected users
+static std :: vector<Client> clients;
+static std :: vector<socket_ptr> connections;
 
 #ifndef SERVCLIENTAPPLIC_INCLUDE_H
 #define SERVCLIENTAPPLIC_INCLUDE_H

@@ -1,9 +1,8 @@
-Server/CMakeFiles/Server.dir/Source/SessionLib.cpp.o: \
- /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/SessionLib.cpp \
+Client/CMakeFiles/Client.dir/Source/Menu.cpp.o: \
+ /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Client/Source/Menu.cpp \
  /usr/include/stdc-predef.h \
- /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/../ClientSession.h \
- /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/../DataBase.h \
- /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/../Global.h \
+ /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Client/Source/../Menu.h \
+ /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Client/Source/../Global.h \
  /usr/include/boost/asio.hpp \
  /usr/include/boost/asio/associated_allocator.hpp \
  /usr/include/boost/asio/detail/config.hpp /usr/include/boost/config.hpp \
@@ -1390,33 +1389,6 @@ Server/CMakeFiles/Server.dir/Source/SessionLib.cpp.o: \
  /usr/include/boost/type_traits/is_fundamental.hpp \
  /usr/include/boost/thread/detail/atomic_undef_macros.hpp \
  /usr/include/boost/thread/detail/atomic_redef_macros.hpp \
- /usr/include/c++/9/unordered_map /usr/include/c++/9/bits/hashtable.h \
- /usr/include/c++/9/bits/hashtable_policy.h \
- /usr/include/c++/9/bits/unordered_map.h /usr/include/c++/9/iostream \
- /home/xink/Загрузки/connectorSQL/include/jdbc/mysql_connection.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/connection.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/build_config.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/warning.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/sqlstring.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/variant.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/exception.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/mysql_driver.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/driver.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/connection.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/driver.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/exception.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/resultset.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/config.h \
- /usr/include/inttypes.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/resultset_metadata.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/datatype.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/statement.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/resultset.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/prepared_statement.h \
- /home/xink/Загрузки/connectorSQL/include/jdbc/cppconn/statement.h \
- /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/../Client.h \
- /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/../Person.h \
- /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/../Order.h \
- /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/../Book.h \
- /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/../Author.h \
- /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/../Buffs.h
+ /usr/include/c++/9/iostream \
+ /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Client/Source/../../Server/Client.h \
+ /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Client/Source/../../Server/Person.h

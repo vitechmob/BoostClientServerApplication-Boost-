@@ -1,6 +1,7 @@
-Server/CMakeFiles/Server.dir/Source/SessionLib.cpp.o: \
- /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/SessionLib.cpp \
+Server/CMakeFiles/Server.dir/Source/Server.cpp.o: \
+ /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/Server.cpp \
  /usr/include/stdc-predef.h \
+ /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/../Server.h \
  /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/../ClientSession.h \
  /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/../DataBase.h \
  /home/xink/CLionProjects/BoostClientServerApplication/ServClientApplic/Server/Source/../Global.h \
