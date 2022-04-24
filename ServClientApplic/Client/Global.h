@@ -15,6 +15,7 @@
 #define LOCAL_HOST "127.0.0.1"
 #define PORT 2001
 #define EXIT_STATUS 0
+#define USER_EXIT 8
 #define USER_BACK 16
 
 

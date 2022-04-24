@@ -46,23 +46,9 @@ void ShowBooksData(socket_ptr socket,char *size){
 }
 
 int LogMenu(){
-    cout << "\t\t\t\t\t\t\t\t\t\t\t--------------------" << endl;
-    cout << "\t\t\t\t\t\t\t\t\t\t\t|Press b to go back|" << endl;
-    cout << "\t\t\t\t\t\t\t\t\t\t\t--------------------" << endl;
-
-    cout << "\t\t\t\t\t\t\t\t\t\t\t+----------+\n";
-    cout << "\t\t\t\t\t\t\t\t\t\t\t|   MENU   |" << endl;
-    cout << "\t\t\t\t\t\t\t\t\t\t\t+----------+\n";
-
-    cout << "\t\t\t\t\t\t\t\t\t\t\t+----------+\n";
-    cout << "\t\t\t\t\t\t\t\t\t\t\t|  LOGIN   |" << endl;
-    cout << "\t\t\t\t\t\t\t\t\t\t\t+----------+\n";
-    cout << "\t\t\t\t\t\t\t\t\t\t\t+----------+\n";
-    cout << "\t\t\t\t\t\t\t\t\t\t\t| REGISTER |" << endl;
-    cout << "\t\t\t\t\t\t\t\t\t\t\t+----------+\n";
-    cout << "\t\t\t\t\t\t\t\t\t\t\t+----------+\n";
-    cout << "\t\t\t\t\t\t\t\t\t\t\t|   EXIT   |" << endl;
-    cout << "\t\t\t\t\t\t\t\t\t\t\t+----------+\n";
+    cout << "1.Register" << endl;
+    cout << "2.Login" << endl;
+    cout << "3.Exit" << endl;
     int choice;
     cin >> choice;
     return choice;
@@ -74,6 +60,7 @@ int UserMenu(socket_ptr socket){
             system("clear");
             cout << "1.Get info" << endl;
             cout << "2.Get books info" << endl;
+            cout << "3.Order a book" << endl;
             switch (auto choice = Rtr<int>();choice) {
                 case 1 :;
                     {
@@ -148,12 +135,59 @@ int UserMenu(socket_ptr socket){
                                     continue;
                                 }
                                 break;
+                        }
+                    }
+                    break;
+                case 3 : ;
+                    {
+                        cout << "Enter the id of the book,that you want to order(b)" << endl;
+                        char id[3];
+                        cin >> id;
+                        socket->send(boost :: asio :: buffer(id));
+                        char resp[3];
+                        switch(resp[0]){
+                            case '1' : ;
+                                {
+                                    cout << "Book that you want to order:" << endl;
+                                    char bk_name[20],auth_name[20],auth_surname[20];
+                                    socket->receive(boost :: asio :: buffer(bk_name));
+                                    socket->receive(boost :: asio :: buffer(auth_name));
+                                    socket->receive(boost :: asio :: buffer(auth_surname));
+                                    cout << "Book name:" << bk_name << endl << "Author name:" << auth_name << endl <<
+                                    "Author surname:" << auth_surname << endl;
+                                }
+                                break;
+                            case '2' : ;
+                                {
+                                    cout << "There is no book with this id,please try again\n" << endl;
+                                }
+                                break;
                             default : ;
                                 {
 
                                 }
                                 break;
                         }
+                    }
+                    break;
+                case 4 : ;
+                    {
+
+                    }
+                    break;
+                case 5 : ;
+                    {
+
+                    }
+                    break;
+                case 6 : ;
+                    {
+
+                    }
+                    break;
+                case 7 : ;
+                    {
+                        return USER_EXIT;
                     }
                     break;
                 default : ;

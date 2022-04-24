@@ -49,6 +49,8 @@ typedef boost :: shared_ptr<boost :: asio :: ip :: tcp :: socket> socket_ptr;
 
 using std :: cout, std :: cin, std :: cerr,std :: endl;
 
+
+static boost :: mutex mutex;
 static std :: vector<Client> clients;
 static std :: vector<socket_ptr> connections;
 

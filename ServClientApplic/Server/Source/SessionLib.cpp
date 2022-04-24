@@ -210,10 +210,7 @@ int UserMenu(Client client,socket_ptr socket){
                     uint64_t size = books.size();
                     char sizeT[20];
                     sprintf(sizeT,"%lu",size);
-                    cout << sizeT << endl;
-                    cout << "123\n";
                     socket->send(boost :: asio :: buffer(sizeT));
-                    cout << "256\n";
                     if(atoi(sizeT) == 1){
                         if(books.begin()->first == -5) {
                             socket->send(boost::asio::buffer("err"));
