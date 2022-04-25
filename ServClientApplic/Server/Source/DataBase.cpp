@@ -106,6 +106,7 @@ int CheckLogin(std :: string input_login) {
                 delete con;
                 delete stmt;
                 delete res;
+                mutex.unlock();
                 return SQL_LOGIN_EXISTS;
             }
         }
@@ -157,6 +158,7 @@ int AddNewUser(const std :: string& name,const std :: string &surname,const std 
         }
     }
     catch(sql::SQLException &e) {
+        mutex.unlock();
         cout << "# ERR: SQLException in " << __FILE__;
         cout << "(" << __FUNCTION__ << ") on line "
              << __LINE__ << endl;
@@ -191,6 +193,7 @@ LogFlagReturning CheckLoginPassword(std :: string input_login,std :: string inpu
                     delete con;
                     delete stmt;
                     delete res;
+                    mutex.unlock();
                     LogFlagReturning log(SQL_SUCCESSFULLY_LOGGED,ID,name,surname,login,password);
                     return log;
                 }
@@ -204,6 +207,7 @@ LogFlagReturning CheckLoginPassword(std :: string input_login,std :: string inpu
         return log;
     }
     catch(sql::SQLException &e) {
+        mutex.unlock();
         cout << "# ERR: SQLException in " << __FILE__;
         cout << "(" << __FUNCTION__ << ") on line "
              << __LINE__ << endl;

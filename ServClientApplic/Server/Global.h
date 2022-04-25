@@ -26,7 +26,7 @@
 #define PORT 2001
 #define DATABASE_ADDRESS "tcp://127.0.0.1:3306"
 #define USERNAME "root"
-#define PASSWORD "enter_your_passw"
+#define PASSWORD "pass"
 
 #define SQL_SUCCESSFULLY_LOGGED 1
 #define SQL_CANT_LOGGED 2
