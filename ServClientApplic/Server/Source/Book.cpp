@@ -28,6 +28,12 @@ Book :: Book(const Book &book){
     *this->author = *book.author;
 }
 
+Book :: Book(const Book &&book){
+    this->id = book.id;
+    this->name = book.name;
+    this->author = book.author;
+}
+
 Book :: ~Book(){
     std :: cout << "Book constructor" << std :: endl;
 }

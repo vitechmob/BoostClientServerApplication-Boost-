@@ -16,6 +16,7 @@ public:
     explicit Author(std :: string,std :: string,int,std :: string);
     void PrintInfo() override;
     explicit Author(const Author &auth);
+    Author(const Author &&auth) noexcept;
     std :: string GetLanguage() const{
         return *writing_language;
     }

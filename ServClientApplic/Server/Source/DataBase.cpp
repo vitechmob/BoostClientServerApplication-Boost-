@@ -17,6 +17,10 @@ int GetUsersValue(sql :: Statement *stmt){
     return i;
 }
 
+int AddOrder(Order order){
+    //Add later
+}
+
 std :: map<int,BookInfo> BooksMap(){
     try {
         mutex.lock();
@@ -29,13 +33,15 @@ std :: map<int,BookInfo> BooksMap(){
         con = driver->connect(DATABASE_ADDRESS, USERNAME, PASSWORD);
         con->setSchema("ApplicationDB");
         stmt = con->createStatement();
-        res = stmt->executeQuery("SELECT books.id,books.book_name,authors.name,authors.surname FROM books JOIN authors on authors.id = books.author_id");
+        res = stmt->executeQuery("SELECT books.id,books.book_name,authors.name,authors.surname,authors.language,author.books_value FROM books JOIN authors on authors.id = books.author_id");
         while (res->next()) {
             int ID = res->getInt("id");
             std::string book_name = res->getString("book_name");
             std::string author_name = res->getString("name");
             std::string author_surname = res->getString("surname");
-            BookInfo inf(ID, book_name, author_name, author_surname);
+            std:: string language = res->getString("language");
+            int books_value = res->getInt("books_value");
+            BookInfo inf(ID, book_name, author_name, author_surname,books_value,language);
             books.insert(std::pair<int, BookInfo>(inf.ID, inf));
         }
         delete con;
@@ -52,7 +58,7 @@ std :: map<int,BookInfo> BooksMap(){
         cout << " (MySQL error code: " << e.getErrorCode();
         cout << ", SQLState: " << e.getSQLState() << " )" << endl;
         std :: map<int,BookInfo> m;
-        m.insert(std :: pair<int,BookInfo>(-5,BookInfo(-5,"err","err","err")));
+        m.insert(std :: pair<int,BookInfo>(-5,BookInfo(-5,"err","err","err",5,"err")));
         return m;
     }
 }

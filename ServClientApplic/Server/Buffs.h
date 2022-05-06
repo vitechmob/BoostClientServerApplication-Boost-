@@ -24,7 +24,9 @@ struct BookInfo{
     std :: string book_name;
     std :: string author_name;
     std :: string author_surname;
-    BookInfo(int ID,std :: string book_name,std :: string author_name,std :: string author_surname);
+    int value_of_books;
+    std :: string writing_language;
+    BookInfo(int ID,std :: string book_name,std :: string author_name,std :: string author_surname,int,std :: string);
 };
 
 struct ClientBuffer{

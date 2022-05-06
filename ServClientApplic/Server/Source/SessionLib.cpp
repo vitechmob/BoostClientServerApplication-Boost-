@@ -269,6 +269,21 @@ int UserMenu(Client client,socket_ptr socket){
                     }
                 }
                 break;
+            case '3' : ;
+                {
+                    char id[3];
+                    socket->receive(boost :: asio :: buffer(id));
+                    std :: map<int,BookInfo> books = BooksMap();
+                    for(auto &[i,book_info] : books){
+                        if(i == atoi(id)){
+                            Author auth(book_info.author_name,book_info.author_surname,book_info.value_of_books,book_info.writing_language);
+                            Book ordered_book(book_info.ID,book_info.book_name,std :: move(auth));
+                            Order new_order(client,std :: move(ordered_book));
+
+                            break;
+                        }
+                    }
+                }
         }
     }
 }

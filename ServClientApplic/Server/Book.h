@@ -15,6 +15,7 @@ public:
     explicit Book(int,std :: string,Author);
     Book();
     explicit Book(const Book&);
+    Book(const Book &&);
     ~Book();
 };
 

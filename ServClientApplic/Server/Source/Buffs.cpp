@@ -18,21 +18,23 @@ BookBuffer ::BookBuffer(BookInfo binf) {
     strcpy(author_surname,binf.author_surname.c_str());
 }
 
-BookInfo ::BookInfo(int ID, std::string book_name, std::string author_name, std::string author_surname) {
+BookInfo :: BookInfo(int ID, std::string book_name, std::string author_name, std::string author_surname,int value_of_books,std :: string writing_language) {
     this->ID = ID;
-    this->book_name = book_name;
-    this->author_name = author_name;
-    this->author_surname = author_surname;
+    this->book_name = std :: move(book_name);
+    this->author_name = std :: move(author_name);
+    this->author_surname = std ::move(author_surname);
+    this->value_of_books = value_of_books;
+    this->writing_language = std :: move(writing_language);
 }
 
 LogFlagReturning ::LogFlagReturning(int CODE, int id, std::string name, std::string surname, std::string login,
                                     std::string password) {
     this->CODE = CODE;
     this->id = id;
-    this->name = name;
-    this->surname = surname;
-    this->login = login;
-    this->password = password;
+    this->name = std :: move(name);
+    this->surname = std :: move(surname);
+    this->login = std :: move(login);
+    this->password = std :: move(password);
 }
 LogFlagReturning ::LogFlagReturning(int CODE) {
     this->CODE = CODE;

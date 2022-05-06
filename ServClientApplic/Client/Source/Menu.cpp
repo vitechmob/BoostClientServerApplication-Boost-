@@ -140,11 +140,14 @@ int UserMenu(socket_ptr socket){
                     break;
                 case 3 : ;
                     {
+                        char rq[2] = {"3"};
+                        socket->send(boost :: asio :: buffer(rq));
                         cout << "Enter the id of the book,that you want to order(b)" << endl;
                         char id[3];
                         cin >> id;
                         socket->send(boost :: asio :: buffer(id));
                         char resp[3];
+                        socket->receive(boost :: asio :: buffer(resp));
                         switch(resp[0]){
                             case '1' : ;
                                 {
@@ -155,6 +158,17 @@ int UserMenu(socket_ptr socket){
                                     socket->receive(boost :: asio :: buffer(auth_surname));
                                     cout << "Book name:" << bk_name << endl << "Author name:" << auth_name << endl <<
                                     "Author surname:" << auth_surname << endl;
+                                    std :: cout << "Do you want to order this book?(y/n)" << std :: endl;
+                                    char ch;
+                                    std :: cin >> ch;
+                                    if(ch == 'Y' || ch ==  'y'){
+                                        char buff[2] {"y"};
+                                        socket->send(boost :: asio :: buffer(buff));
+                                    }
+                                    else{
+                                        char buff[2] {"n"};
+                                        socket->send(boost :: asio :: buffer(buff));
+                                    }
                                 }
                                 break;
                             case '2' : ;

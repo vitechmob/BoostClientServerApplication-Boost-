@@ -17,6 +17,13 @@ Author ::Author(std :: string name,std :: string surname,int value_of_books,std 
     *this->writing_language = std :: move(writing_language);
 }
 
+Author :: Author(const Author &&auth) noexcept{
+    this->name  = auth.name;
+    this->surname = auth.surname;
+    this->value_of_books = auth.value_of_books;
+    this->writing_language = auth.writing_language;
+}
+
 Author ::Author(const Author &auth) : Person(auth){
     this->value_of_books = boost :: shared_ptr<int>(new int);
     this->writing_language = boost :: shared_ptr<std :: string>(new std :: string);
