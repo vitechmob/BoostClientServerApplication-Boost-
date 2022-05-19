@@ -16,6 +16,15 @@ public:
     Book();
     explicit Book(const Book&);
     Book(const Book &&);
+    int GetId(){
+        return *id;
+    }
+    std :: string GetName(){
+        return *name;
+    }
+    boost :: shared_ptr<Author> GetAuthor(){
+        return author;
+    }
     ~Book();
 };
 

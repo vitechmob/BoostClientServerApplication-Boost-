@@ -93,14 +93,19 @@ int Server :: Monitor(){
     try{
         while(*isRunning) {
             cout << "CONNECTED USERS TO THE SERVER:" << clients_sockets->size() << endl;
-            cout << "+-------------------------------------------------------+" << endl;
-            cout << "|ID|\t\t|Name|\t\t|Surname|\t\t|Login|" << endl;
-            cout << "+-------------------------------------------------------+" << endl;
+            fort :: char_table table;
+            table.set_border_style(FT_DOUBLE2_STYLE);
+            table.column(0).set_cell_text_align(fort::text_align::center);
+            table.column(1).set_cell_text_align(fort::text_align::center);
+            table.column(2).set_cell_text_align(fort::text_align::center);
+            table.column(3).set_cell_text_align(fort::text_align::center);
+            table.row(0).set_cell_content_fg_color(fort :: color :: red);
+            table << fort :: header << "ID" << "NAME" << "SURNAME" << "LOGIN" << fort :: endr;
             for(int i = 0;i < logged_clients->size();i++){
-                cout << "|" << logged_clients->at(i).GetId() << "|\t\t|" << logged_clients->at(i).GetName()
-                     << "|\t\t|" << logged_clients->at(i).GetSurname() << "|\t\t|" << logged_clients->at(i).GetLogin() << endl;
-                cout << "+---------------------------------------------+" << endl;
+                table << logged_clients->at(i).GetId() << logged_clients->at(i).GetName() << logged_clients->at(i).GetSurname()
+                << logged_clients->at(i).GetLogin()  << fort :: endr;
             }
+            std :: cout << table.to_string() << std :: endl;
             boost :: this_thread ::sleep(boost :: posix_time:: seconds(2));
             system("clear");
         }

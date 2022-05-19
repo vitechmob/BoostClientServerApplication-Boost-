@@ -6,6 +6,7 @@
 #define SERVCLIENTAPPLIC_BUFFS_H
 
 #include "Client.h"
+#include "Order.h"
 #include <cstring>
 
 struct LogFlagReturning{
@@ -29,6 +30,26 @@ struct BookInfo{
     BookInfo(int ID,std :: string book_name,std :: string author_name,std :: string author_surname,int,std :: string);
 };
 
+struct OrderInfo{
+    int book_ID;
+    int user_ID;
+    std :: string book_name;
+    std :: string author_name;
+    std :: string author_surname;
+    std :: string user_name;
+    std :: string user_surname;
+    std :: string user_login;
+    OrderInfo(Order order);
+};
+
+struct OrderBuffer{
+    char book_id[64];
+    char user_id[64];
+    char book_name[64];
+    char author_name[64];
+    char author_surname[64];
+    explicit OrderBuffer(OrderInfo&);
+};
 struct ClientBuffer{
     char id_buff[20];
     char name_buff[20];

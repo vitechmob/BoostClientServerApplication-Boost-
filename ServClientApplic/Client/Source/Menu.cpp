@@ -13,36 +13,18 @@ T Rtr(){
 
 void ShowBooksData(socket_ptr socket,char *size){
     char id[20],book_name[20],author_name[20],author_surname[20];
-    cout.width(20);
-    cout.setf(std :: ios :: left);
-    cout << "Book ID";
-    cout.width(20);
-    cout.setf(std :: ios :: left);
-    cout << "Book name";
-    cout.width(20);
-    cout.setf(std :: ios :: left);
-    cout << "Author name";
-    cout.width(20);
-    cout.setf(std :: ios :: left);
-    cout << "Author surname" << endl;
+    fort :: char_table table;
+    table << fort :: header << "BOOK ID" << "BOOK NAME" << "AUTHOR NAME" << "AUTHOR SURNAME" << fort :: endr;
+    table.set_border_style(FT_NICE_STYLE);
+    table.row(0).set_cell_content_fg_color(fort :: color :: green);
     for(int i = 0;i < atoi(size);i++){
         socket->receive(boost :: asio :: buffer(id));
         socket->receive(boost :: asio :: buffer(book_name));
         socket->receive(boost :: asio :: buffer(author_name));
         socket->receive(boost :: asio :: buffer(author_surname));
-        cout.width(20);
-        cout.setf(std :: ios :: left);
-        cout << id;
-        cout.width(20);
-        cout.setf(std :: ios :: left);
-        cout << book_name;
-        cout.width(20);
-        cout.setf(std :: ios :: left);
-        cout << author_name;
-        cout.width(20);
-        cout.setf(std :: ios :: left);
-        cout << author_surname << endl;
+        table << id << book_name << author_name << author_surname << fort :: endr;
     }
+    std :: cout << table.to_string() << std :: endl;
 }
 
 int LogMenu(){
@@ -57,13 +39,15 @@ int LogMenu(){
 int UserMenu(socket_ptr socket){
     try {
         while (true) {
-            system("clear");
             cout << "1.Get info" << endl;
             cout << "2.Get books info" << endl;
             cout << "3.Order a book" << endl;
+            cout << "4.Check orders" << endl;
+            cout << "5.Exit" << endl;
             switch (auto choice = Rtr<int>();choice) {
                 case 1 :;
                     {
+                        system("clear");
                         char req[2] = {"1"};
                         socket->send(boost :: asio :: buffer(req));
                         char id[20], name[20], surname[20], login[20];
@@ -76,6 +60,7 @@ int UserMenu(socket_ptr socket){
                     break;
                 case 2 : ;
                     {
+                        system("clear");
                         char req[2] = {"2"};
                         socket->send(boost :: asio :: buffer(req));
                         char size[20];
@@ -94,6 +79,7 @@ int UserMenu(socket_ptr socket){
                         switch(auto chs = Rtr<int>();chs){
                             case 1 : ;
                                 {
+                                    system("clear");
                                     char rq[2] = {"1"};
                                     socket->send(boost :: asio :: buffer(rq));
                                     cout << "1.Sort by book name" << endl;
@@ -102,6 +88,7 @@ int UserMenu(socket_ptr socket){
                                     switch(auto sort_choice = Rtr<int>();sort_choice){
                                         case 1 : ;
                                             {
+                                                system("clear");
                                                 char rq_st[2] = {"1"};
                                                 socket->send(boost :: asio :: buffer(rq_st));
                                                 ShowBooksData(socket,size);
@@ -109,6 +96,7 @@ int UserMenu(socket_ptr socket){
                                             break;
                                         case 2 : ;
                                             {
+                                                system("clear");
                                                 char rq_st[2] = {"2"};
                                                 socket->send(boost :: asio :: buffer(rq_st));
                                                 ShowBooksData(socket,size);
@@ -116,6 +104,7 @@ int UserMenu(socket_ptr socket){
                                             break;
                                         case 3 : ;
                                             {
+                                                system("clear");
                                                 char rq_st[2] = {"3"};
                                                 socket->send(boost :: asio :: buffer(rq_st));
                                                 ShowBooksData(socket,size);
@@ -130,6 +119,7 @@ int UserMenu(socket_ptr socket){
                                 break;
                             case 2 : ;
                                 {
+                                    system("clear");
                                     char rq[2] = {"2"};
                                     socket->send(boost :: asio :: buffer(rq));
                                     continue;
@@ -152,7 +142,8 @@ int UserMenu(socket_ptr socket){
                             case '1' : ;
                                 {
                                     cout << "Book that you want to order:" << endl;
-                                    char bk_name[20],auth_name[20],auth_surname[20];
+                                    char bk_id[20],bk_name[20],auth_name[20],auth_surname[20];
+                                    socket->receive(boost :: asio :: buffer(bk_id));
                                     socket->receive(boost :: asio :: buffer(bk_name));
                                     socket->receive(boost :: asio :: buffer(auth_name));
                                     socket->receive(boost :: asio :: buffer(auth_surname));
@@ -162,12 +153,21 @@ int UserMenu(socket_ptr socket){
                                     char ch;
                                     std :: cin >> ch;
                                     if(ch == 'Y' || ch ==  'y'){
-                                        char buff[2] {"y"};
+                                        char buff[3] {"y"};
                                         socket->send(boost :: asio :: buffer(buff));
+                                        char resp_buffer[3];
+                                        socket->receive(boost :: asio :: buffer(resp_buffer));
+                                        if(resp_buffer[0] == '1'){
+                                            std :: cout << "Order has been successfully added\n";
+                                        }
+                                        else if(resp_buffer[0] == '2'){
+                                            std :: cout << "Can't add order, problems with data base\n";
+                                        }
                                     }
                                     else{
-                                        char buff[2] {"n"};
+                                        char buff[3] {"n"};
                                         socket->send(boost :: asio :: buffer(buff));
+                                        std :: cout << "Order has been declined\n";
                                     }
                                 }
                                 break;
@@ -186,7 +186,26 @@ int UserMenu(socket_ptr socket){
                     break;
                 case 4 : ;
                     {
-
+                        char req[3] = {"4"};
+                        socket->send(boost :: asio :: buffer(req));
+                        char size_of_orders[32];
+                        socket->receive(boost :: asio :: buffer(size_of_orders));
+                        if(size_of_orders[0] == '0'){
+                            std :: cout << "You have no orders\n";
+                            break;
+                        }
+                        else{
+                            for(int i = 0;i < atoi(size_of_orders);i++){
+                                char book_id[64];
+                                char book_name[64];
+                                char author_name[64];
+                                char author_surname[64];
+                                socket->receive(boost :: asio :: buffer(book_id));
+                                socket->receive(boost :: asio :: buffer(book_name));
+                                socket->receive(boost :: asio :: buffer(author_name));
+                                socket->receive(boost :: asio :: buffer(author_surname));
+                            }
+                        }
                     }
                     break;
                 case 5 : ;

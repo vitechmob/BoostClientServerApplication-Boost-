@@ -23,15 +23,15 @@ int RegFunction(socket_ptr socket){
     if(CheckBack(password)){
         return USER_BACK;
     }
-    if (AddNewUser(std :: string(name), std :: string(surname), std :: string(login), std :: string(password)) == SQL_SUCCESSFULLY_ADDED) {
+    if (DataBase :: AddNewUser(std :: string(name), std :: string(surname), std :: string(login), std :: string(password)) == SQL_SUCCESSFULLY_ADDED) {
         char resp[2] = {"1"};
         socket->send(boost::asio::buffer(resp));
         return SQL_SUCCESSFULLY_ADDED;
-    } else if (AddNewUser(std :: string(name), std :: string(surname), std :: string(login), std :: string(password)) == SQL_LOGIN_EXISTS) {
+    } else if (DataBase :: AddNewUser(std :: string(name), std :: string(surname), std :: string(login), std :: string(password)) == SQL_LOGIN_EXISTS) {
         char resp[2] = {"5"};
         socket->send(boost::asio::buffer(resp));
         return RegFunction(socket);
-    } else if(AddNewUser(std :: string(name), std :: string(surname), std :: string(login), std :: string(password)) == SQL_ERROR) {
+    } else if(DataBase :: AddNewUser(std :: string(name), std :: string(surname), std :: string(login), std :: string(password)) == SQL_ERROR) {
         cerr << "Error, cant add new user in DB\n";
         char err_code[2] = {"3"};
         socket->send(boost::asio::buffer(err_code));
@@ -109,7 +109,7 @@ LogFlagReturning LogFunction(socket_ptr socket){
         LogFlagReturning lgFl(USER_BACK);
         return lgFl;
     }
-    LogFlagReturning lgFl = CheckLoginPassword(login, passw);
+    LogFlagReturning lgFl = DataBase :: CheckLoginPassword(login, passw);
     if (lgFl.CODE == SQL_SUCCESSFULLY_LOGGED) {
         char answ[2] = {"1"};
         socket->send(boost::asio::buffer(answ));
@@ -206,7 +206,7 @@ int UserMenu(Client client,socket_ptr socket){
                 break;
             case '2' : ;
                 {
-                    std :: map<int,BookInfo> books = BooksMap();
+                    std :: map<int,BookInfo> books = DataBase :: BooksMap();
                     uint64_t size = books.size();
                     char sizeT[20];
                     sprintf(sizeT,"%lu",size);
@@ -273,17 +273,67 @@ int UserMenu(Client client,socket_ptr socket){
                 {
                     char id[3];
                     socket->receive(boost :: asio :: buffer(id));
-                    std :: map<int,BookInfo> books = BooksMap();
+                    std :: map<int,BookInfo> books = DataBase :: BooksMap();
+                    int flag = 0;
                     for(auto &[i,book_info] : books){
                         if(i == atoi(id)){
+                            char resp[3] = {"1"};
+                            socket->send(boost :: asio :: buffer(resp));
+                            flag++;
                             Author auth(book_info.author_name,book_info.author_surname,book_info.value_of_books,book_info.writing_language);
                             Book ordered_book(book_info.ID,book_info.book_name,std :: move(auth));
                             Order new_order(client,std :: move(ordered_book));
-
+                            BookBuffer buffer(book_info);
+                            socket->send(boost :: asio :: buffer(buffer.book_ID));
+                            socket->send(boost :: asio :: buffer(buffer.book_name));
+                            socket->send(boost :: asio :: buffer(buffer.author_name));
+                            socket->send(boost :: asio :: buffer(buffer.author_surname));
+                            char resp_buff[3];
+                            socket->receive(boost :: asio :: buffer(resp_buff));
+                            if(resp_buff[0] == 'y' || resp_buff[0] == 'Y'){
+                                std :: cout << "Adding new book\n" << std :: endl;
+                                if(DataBase::AddNewOrder(new_order) == SQL_SUCCESSFULLY_ADDED){
+                                    char req_ord[3] = {"1"};
+                                    socket->send(boost :: asio :: buffer(req_ord));
+                                }else{
+                                    char req_ord[3] = {"2"};
+                                    socket->send(boost :: asio :: buffer(req_ord));
+                                };
+                            }
+                            else{
+                                char req_ord[3] = {"3"};
+                                socket->send(boost :: asio :: buffer(req_ord));
+                            }
                             break;
                         }
                     }
+                    if(flag == 0){
+                        char resp[3] = {"2"};
+                        socket->send(boost :: asio :: buffer(resp));
+                        continue;
+                    }
                 }
+            case '4' : ;
+            {
+                std :: vector<OrderInfo> orders = DataBase::GetOrders(client);
+                std :: size_t size = orders.size();
+                char number_of_orders[32];
+                sprintf(number_of_orders,"%lu",size);
+                socket->send(boost :: asio :: buffer(number_of_orders));
+                if(size == 0){
+                    break;
+                }
+                else {
+                    for (auto &i: orders) {
+                        OrderBuffer ord_buffer(i);
+                        socket->send(boost::asio::buffer(ord_buffer.user_id));
+                        socket->send(boost::asio::buffer(ord_buffer.book_name));
+                        socket->send(boost::asio::buffer(ord_buffer.author_name));
+                        socket->send(boost::asio::buffer(ord_buffer.author_surname));
+                    }
+                }
+            }
+            break;
         }
     }
 }

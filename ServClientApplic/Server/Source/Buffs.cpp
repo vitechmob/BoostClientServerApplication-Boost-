@@ -11,7 +11,7 @@ ClientBuffer :: ClientBuffer(Client client) {
     strcpy(password_buff,client.GetPassword().c_str());
 }
 
-BookBuffer ::BookBuffer(BookInfo binf) {
+BookBuffer ::BookBuffer(const BookInfo binf) {
     sprintf(book_ID,"%d",binf.ID);
     strcpy(book_name,binf.book_name.c_str());
     strcpy(author_name,binf.author_name.c_str());
@@ -38,4 +38,22 @@ LogFlagReturning ::LogFlagReturning(int CODE, int id, std::string name, std::str
 }
 LogFlagReturning ::LogFlagReturning(int CODE) {
     this->CODE = CODE;
+}
+
+OrderInfo :: OrderInfo(Order order){
+    this->book_ID = order.GetBook()->GetId();
+    this->user_ID = order.GetClient()->GetId();
+    this->book_name = order.GetBook()->GetName();
+    this->author_name = order.GetBook()->GetAuthor()->GetName();
+    this->author_surname = order.GetBook()->GetAuthor()->GetSurname();
+    this->user_name = order.GetClient()->GetName();
+    this->user_surname = order.GetClient()->GetSurname();
+    this->user_login = order.GetClient()->GetLogin();
+}
+
+OrderBuffer::OrderBuffer(OrderInfo &inf) {
+    sprintf(book_id,"%d",inf.book_ID);
+    strcpy(book_name,inf.book_name.c_str());
+    strcpy(author_name,inf.author_name.c_str());
+    strcpy(author_surname,inf.author_surname.c_str());
 }

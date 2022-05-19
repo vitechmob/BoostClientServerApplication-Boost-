@@ -5,6 +5,7 @@
 #ifndef SERVCLIENTAPPLIC_GLOBAL_H
 #define SERVCLIENTAPPLIC_GLOBAL_H
 #pragma once
+#include "fort.hpp"
 #include <boost/asio.hpp>
 #include <boost/thread.hpp>
 #include <vector>

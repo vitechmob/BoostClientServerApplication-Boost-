@@ -17,7 +17,13 @@ private:
 public:
     Order();
     explicit Order(Client,Book);
-    explicit Order(const Order&);
+    Order(const Order&);
+    boost :: shared_ptr<Book> GetBook(){
+        return book;
+    };
+    boost :: shared_ptr<Client> GetClient(){
+        return client;
+    }
     ~Order();
 };
 

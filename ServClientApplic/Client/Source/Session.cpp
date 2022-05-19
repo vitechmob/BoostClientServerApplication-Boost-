@@ -17,8 +17,9 @@ int Session(socket_ptr socket){
                         char req[2] = {"1"};
                         socket->send(boost::asio::buffer(req));
                         int regFlag = Register(socket);
+                        system("clear");
                         if (regFlag == SUCCESSFULLY_REGISTERED) {
-                            cout << "U have been successfully registered, please log in";
+                            cout << "U have been successfully registered, please log in\n";
                         }
                         else if(regFlag == USER_BACK){
                             cout << "Going back" << endl;

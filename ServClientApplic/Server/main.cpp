@@ -10,6 +10,6 @@ int main() {
    //  Starting the server
     mainServ.Start();
    // Starting the thread that will monitor server info
-    boost :: thread MonitorThread(boost :: bind(&Server :: Monitor,&mainServ));
+    boost :: thread MonitorThread([&mainServ] {mainServ.Monitor();});
     MonitorThread.join();
 }
