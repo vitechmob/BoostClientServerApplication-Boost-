@@ -43,7 +43,8 @@ int UserMenu(socket_ptr socket){
             cout << "2.Get books info" << endl;
             cout << "3.Order a book" << endl;
             cout << "4.Check orders" << endl;
-            cout << "5.Exit" << endl;
+            cout << "5.Log out" << endl;
+            cout << "6.Exit" << endl;
             switch (auto choice = Rtr<int>();choice) {
                 case 1 :;
                     {
@@ -195,6 +196,15 @@ int UserMenu(socket_ptr socket){
                             break;
                         }
                         else{
+                            std :: cout << "YOUR ORDERS:" << std :: endl;
+                            fort :: char_table table;
+                            table.set_border_style(FT_DOUBLE2_STYLE);
+                            table.column(0).set_cell_text_align(fort::text_align::center);
+                            table.column(1).set_cell_text_align(fort::text_align::center);
+                            table.column(2).set_cell_text_align(fort::text_align::center);
+                            table.column(3).set_cell_text_align(fort::text_align::center);
+                            table.row(0).set_cell_content_fg_color(fort :: color :: red);
+                            table << fort :: header << "BOOK ID" << "BOOK_NAME" << "AUTHOR_NAME" << "AUTHOR_SURNAME" << fort :: endr;
                             for(int i = 0;i < atoi(size_of_orders);i++){
                                 char book_id[64];
                                 char book_name[64];
@@ -204,28 +214,24 @@ int UserMenu(socket_ptr socket){
                                 socket->receive(boost :: asio :: buffer(book_name));
                                 socket->receive(boost :: asio :: buffer(author_name));
                                 socket->receive(boost :: asio :: buffer(author_surname));
+                                table << book_id << book_name << author_name << author_surname << fort :: endr;
                             }
+                            std :: cout << table.to_string() << std :: endl;
                         }
                     }
                     break;
                 case 5 : ;
                     {
-
+                        char req[3] = {"5"};
+                        socket->send(boost :: asio :: buffer(req));
+                        return USER_BACK;
                     }
                     break;
                 case 6 : ;
                     {
-
-                    }
-                    break;
-                case 7 : ;
-                    {
-                        return USER_EXIT;
-                    }
-                    break;
-                default : ;
-                    {
-
+                        char req[3] = {"6"};
+                        socket->send(boost :: asio :: buffer(req));
+                        exit(0);
                     }
                     break;
             }

@@ -9,7 +9,6 @@ int Session(socket_ptr socket){
     boost :: shared_ptr<bool> flag_ptr(new bool);
     *flag_ptr = true;
     while(*flag_ptr) {
-
         try {
             switch (auto choice = LogMenu();choice) {
                 case 1 :;
@@ -43,7 +42,7 @@ int Session(socket_ptr socket){
                     {
                         char req[2] = {"3"};
                         socket->send(boost :: asio :: buffer(req));
-                        *flag_ptr = false;
+                        exit(EXIT_STATUS);
                     }
                     break;
                 case 4 :;

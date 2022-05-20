@@ -8,10 +8,16 @@ int main() {
     socket_ptr socket(new boost :: asio :: ip :: tcp :: socket(io_service));
     try {
         socket->connect(ep, ec);
-        if(Session(socket) == SUCCESSFULLY_LOGGED){
-            cout << "You successfully logged in\n";
-            char id_buffer[30];
-            UserMenu(socket);
+        while(true) {
+            if (Session(socket) == SUCCESSFULLY_LOGGED) {
+                cout << "You successfully logged in\n";
+                char id_buffer[30];
+                if(UserMenu(socket) == USER_BACK){
+                    continue;
+                }else if(UserMenu(socket) == USER_EXIT){
+                    exit(0);
+                };
+            }
         }
     }
     catch(const std :: exception &ex){

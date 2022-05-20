@@ -14,9 +14,20 @@
         return i;
     }
 
-    int GetBooksValue(sql::Statement *stmt) {
+    int DataBase :: GetBooksValue(sql::Statement *stmt) {
         sql::ResultSet *res;
-        res = stmt->executeQuery("SELECT id,book_id,user_id FROM orders ORDER BY id ASC");
+        res = stmt->executeQuery("SELECT id,book_name,author_id FROM orders ORDER BY id ASC");
+        int i = 1;
+        while (res->next()) {
+            std :: cout << i << std :: endl;
+            i++;
+        }
+        delete res;
+        return i;
+    }
+    int DataBase::GetOrdersValue(sql::Statement *stmt) {
+        sql::ResultSet *res;
+        res = stmt->executeQuery("SELECT order_id,book_id,user_id FROM orders ORDER BY order_id ASC");
         int i = 1;
         while (res->next()) {
             std :: cout << i << std :: endl;
@@ -71,7 +82,6 @@
     };
     int DataBase :: AddNewOrder(Order &order) {
         try {
-            std :: cout << "Adding order..." << std :: endl;
             mutex.lock();
             sql::Driver *driver;
             sql::Connection *con;
@@ -81,13 +91,13 @@
             driver = get_driver_instance();
             con = driver->connect(DATABASE_ADDRESS, USERNAME, PASSWORD);
             con->setSchema("ApplicationDB");
-            prep_stmt = con->prepareStatement("INSERT INTO orders(id,book_id,user_id) VALUES (?,?,?)");
-            std :: cout << "Connecting to the database.." << std :: endl;
+            std :: cout << "Connected to the DataBase\n";
+            prep_stmt = con->prepareStatement("INSERT INTO orders(order_id,book_id,user_id) VALUES (?,?,?)");
             stmt = con->createStatement();
-            prep_stmt->setInt(1, GetBooksValue(stmt));
+            std :: cout << "Can't see this" << std :: endl;
+            prep_stmt->setInt(1, GetOrdersValue(stmt));
             prep_stmt->setInt(2, order.GetBook()->GetId());
             prep_stmt->setInt(3, order.GetClient()->GetId());
-            std :: cout << GetBooksValue(stmt) << " " << order.GetBook()->GetId() << " " << order.GetClient()->GetId();
             prep_stmt->execute();
             delete con;
             delete prep_stmt;
@@ -242,7 +252,8 @@
                 prep_stmt->setString(2, name);
                 prep_stmt->setString(3, surname);
                 prep_stmt->setString(4, login);
-                prep_stmt->setString(5, password);
+                std :: cout << hash ::sha256(password) << " " << hash ::sha256(password).length() << std :: endl;
+                prep_stmt->setString(5, hash ::sha256(password));
                 prep_stmt->execute();
                 delete con;
                 delete prep_stmt;
@@ -282,7 +293,7 @@
                 std::string login = res->getString("login");
                 std::string password = res->getString("password");
                 if (input_login.compare(login) == 0) {
-                    if (input_password.compare(password) == 0) {
+                    if (hash ::sha256(input_password).compare(password) == 0) {
                         delete con;
                         delete stmt;
                         delete res;

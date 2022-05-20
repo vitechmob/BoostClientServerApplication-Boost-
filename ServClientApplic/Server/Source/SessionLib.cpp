@@ -67,7 +67,18 @@ int ClientSession(socket_ptr socket,boost :: shared_ptr<std :: vector<boost :: s
                             clients->push_back(this_user);
                             *value_of_logged_clients = *value_of_logged_clients + 1;
                             this_logged_id = *value_of_logged_clients;
-                            return UserMenu(this_user,socket);
+                            if(UserMenu(this_user,socket) == USER_LOGGED_OUT){
+                                if(this_logged_id != 0) {
+                                    clients->erase(clients->begin() + this_logged_id);
+                                }
+                                continue;
+                            }else if(UserMenu(this_user,socket) == SERV_USER_EXIT){
+                                sockets->erase(sockets->begin() + this_socket_id);
+                                if(this_logged_id != 0) {
+                                    clients->erase(clients->begin() + this_logged_id);
+                                }
+                                return SERV_USER_EXIT;
+                            };
                         }
                         else if(logFlag.CODE == USER_BACK){
                             continue;
@@ -78,9 +89,6 @@ int ClientSession(socket_ptr socket,boost :: shared_ptr<std :: vector<boost :: s
                     {
                         cerr << "User disconnected" << endl;
                         sockets->erase(sockets->begin() + this_socket_id);
-                        if(this_logged_id != 0) {
-                            clients->erase(clients->begin() + this_logged_id);
-                        }
                         return SERV_USER_EXIT;
                     }
                     break;
@@ -326,7 +334,7 @@ int UserMenu(Client client,socket_ptr socket){
                 else {
                     for (auto &i: orders) {
                         OrderBuffer ord_buffer(i);
-                        socket->send(boost::asio::buffer(ord_buffer.user_id));
+                        socket->send(boost::asio::buffer(ord_buffer.book_id));
                         socket->send(boost::asio::buffer(ord_buffer.book_name));
                         socket->send(boost::asio::buffer(ord_buffer.author_name));
                         socket->send(boost::asio::buffer(ord_buffer.author_surname));
@@ -334,6 +342,16 @@ int UserMenu(Client client,socket_ptr socket){
                 }
             }
             break;
+            case '5' : ;
+                {
+                    return USER_LOGGED_OUT;
+                }
+                break;
+            case '6' : ;
+                {
+                    return SERV_USER_EXIT;
+                }
+                break;
         }
     }
 }

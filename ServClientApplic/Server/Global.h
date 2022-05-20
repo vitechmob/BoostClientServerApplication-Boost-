@@ -3,6 +3,7 @@
 //
 #pragma once
 #include "fort.hpp"
+#include "Sha256.h"
 #include <boost/asio.hpp>
 #include <boost/thread.hpp>
 #include <vector>
@@ -27,7 +28,7 @@
 #define PORT 2001
 #define DATABASE_ADDRESS "tcp://127.0.0.1:3306"
 #define USERNAME "root"
-#define PASSWORD "rt_psw"
+#define PASSWORD "N2jjeh3aj752a3ec"
 
 #define SQL_SUCCESSFULLY_LOGGED 1
 #define SQL_CANT_LOGGED 2
@@ -45,6 +46,7 @@
 #define SERV_STOP_ERROR 15
 #define USER_BACK 16
 #define SORT_SUCCESS 17
+#define USER_LOGGED_OUT 18
 
 typedef boost :: shared_ptr<boost :: asio :: ip :: tcp :: socket> socket_ptr;
 
